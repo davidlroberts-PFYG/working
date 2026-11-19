@@ -1,12 +1,16 @@
 # Plan For Your Goals: single-page site plan
 
-Prepared 2026-11-19 for David Roberts, CCO. Status: draft for your review. Nothing here is published or approved.
+Prepared 2026-11-19 for David Roberts, CCO. Updated the same day with your four CCO decisions and the build choice. Status: draft. Nothing here is published, and the page has not had its final sign-off.
 
 Files in this folder:
 
 - `planforyourgoals-landing-mockup.html` is the mock-up as one self-contained file. Open it in a browser. The button in the dark bar at the top turns the review notes on and off.
 - `previews/desktop.jpg`, `previews/phone.jpg`, `previews/desktop-with-review-notes.jpg` are pictures of the same page.
 - `mockup/` holds the source page and the four image files (your logo, your photo, the SOEF logo, the favicon).
+- `BUILD-SHEET.md` is the step-by-step Squarespace build with every block of text ready to paste.
+- `SESSION-PROMPT.md` is a starter prompt for a Claude session that can control your Chrome.
+- `redirects.txt` is the 73-line redirect list for launch day.
+- `DECISIONS-TO-RECORD.md` holds draft rows for your decisions log and the three edits to your WEBSITE block.
 
 ## 1. What was decided
 
@@ -20,6 +24,7 @@ These came from your answers on 2026-11-18.
 | Voice | Firm page, you in first person, plain and respectful |
 | Look | A quieter sibling of SOEF |
 | Contact details | Your standard block: SOEF email, (855) 696-8284, Gulf Breeze address |
+| Where it is built (2026-11-19) | A new one-page Squarespace site, started as a trial |
 
 ## 2. What the page is for
 
@@ -77,7 +82,7 @@ Run with your florida-ria-cco skill's marketing-review playbook. This is a revie
 
 **Tier:** 2. A website page is an advertisement under the Marketing Rule as Florida incorporates it.
 
-**Result:** No blocking flags in the new copy. Four items need your decision and three facts need confirming before it goes live.
+**Result:** No blocking flags in the new copy. You decided the four CCO items on 2026-11-19. Three facts still need confirming before it goes live.
 
 ### What was checked and how it came out
 
@@ -100,18 +105,20 @@ Run with your florida-ria-cco skill's marketing-review playbook. This is a revie
 
 | Block | Where | How |
 |---|---|---|
-| WEBSITE | Footer | Word for word from your disclosure file, with one placeholder (see below) |
+| WEBSITE | Footer | Your disclosure file's text with the three changes you approved on 2026-11-19, and one placeholder (see below) |
 | SOEF, both paragraphs | Under the main button in section 4 | Word for word |
-| WARRANTIES | On the Terms page, not on this page | Carried over unchanged |
+| WARRANTIES | Terms page | Open. The live Terms page today carries a different, longer text and not this block. Your call which goes on the new page |
 
 One placeholder: the WEBSITE block ends its first paragraph with the firm's planforyourgoals.com email address. A privacy control in this session refused to let me write that address into a file, so the mock-up shows a marked placeholder there. Paste the block from your own disclosure file when you build the page.
 
-### Needs your call as CCO
+### Decided by you as CCO, 2026-11-19
 
-1. **Testimonial sentence in the WEBSITE block.** It reads "The Testimonials provided is/are not representative of all experiences." No testimonials remain on this page. Keeping it is harmless but odd; removing it changes approved text, which is your decision.
-2. **"Copyright © 2023" in the WEBSITE block.** Already listed as gap 6 in your disclosure file.
-3. **"State registered" or "State of Florida registered."** The approved block opens with the first. The live SOEF footer already uses the second. Pick one and make both sites match.
-4. **BrokerCheck link.** The old footer says "Check David's background on FINRA's BrokerCheck." The firm has no broker-dealer affiliation, and that link can read as if it does. The mock-up links to the firm's record at adviserinfo.sec.gov instead.
+1. **Testimonial sentence:** removed from the footer disclosure on this page.
+2. **Copyright year:** updated to 2026.
+3. **Registration wording:** the footer disclosure opens "a State of Florida registered investment adviser."
+4. **BrokerCheck link:** replaced with the firm's record at adviserinfo.sec.gov.
+
+The mock-up and the build sheet carry all four. They are not yet in your decisions log or your disclosure file; `DECISIONS-TO-RECORD.md` has draft rows.
 
 ### Confirm before it goes live
 
@@ -156,7 +163,7 @@ That gives two ways to do this.
 | Fit with your rule that SOEF is a brand and the firm is the adviser | Clean. The firm's address shows the firm's page | Weaker. The firm's web address resolves to the brand's site |
 | Privacy Policy and Terms | Stay at their current addresses | Move under the SOEF domain |
 
-I recommend Option A. The firm's web address is on your Form ADV and in years of emails and documents. It should keep answering as the firm.
+I recommended Option A and you chose it on 2026-11-19. The firm's web address is on your Form ADV and in years of emails and documents. It should keep answering as the firm.
 
 ### Checklist for the conversation with your developer
 
@@ -188,7 +195,7 @@ The current site is advertising the firm has used. Before it goes dark, save a d
 | Contact form (WPForms) and the "Schedule a call" and "Free review" pages | Find out where those submissions go today and whether any email sequence depends on them |
 | Two Facebook tracking pixels and Google Analytics (via Site Kit) | Pause any ads that send people to old pages. Decide whether the new page carries any tracking; I recommend Squarespace's built-in analytics only |
 | Privacy Policy page | Carry it over. It still shows the old phone number (850) 786-3400 |
-| Terms page | Carry it over unchanged |
+| Terms page | Carry it over. It shows the old phone number, says "Branch Office," and describes the site as a blog offering retirement planning services |
 | Client login | Unaffected. It is a RightCapital address |
 
 ### Redirects
@@ -222,11 +229,11 @@ Set these in Squarespace's URL mappings so old links and search results land som
 
 ## 10. Order of work
 
-1. You review the mock-up and make the four CCO decisions in section 5.
+1. Done: you reviewed the mock-up and made the four CCO decisions. Record them (`DECISIONS-TO-RECORD.md`).
 2. You confirm the three facts in section 5.
 3. Developer conversation, using the section 6 checklist.
 4. Capture the old site to the advertising file.
-5. Build the page in Squarespace on its temporary address. Carry over Privacy Policy and Terms.
+5. Build the page in Squarespace on its temporary address, from `BUILD-SHEET.md`. Carry over Privacy Policy and Terms. This can start now; it does not depend on steps 2 to 4.
 6. Final compliance review of the built page; sign and file the review record.
 7. Load redirects. Send the client note.
 8. Switch the two website DNS records. Test the site, the redirects and email.
