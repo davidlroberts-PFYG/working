@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Plan For Your Goals, LLC | Fiduciary Financial Planning | Gulf Breeze, FL (DRAFT MOCK-UP)</title>
+<meta name="description" content="Plan For Your Goals, LLC is a State of Florida registered investment adviser in Gulf Breeze, FL, and the advisory firm behind Secure On Every Front.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  /* Palette and type read from secureoneveryfront.com on 2026-11-19 */
+  :root {
+    --navy: #1B365D;
+    --cream: #EAE6DD;
+    --gold: #F0CD5F;
+    --orange: #DA5B37;
+    --ink: #2D2D2A;
+    --paper: #F6F3EC;
+    --line-on-navy: rgba(234, 230, 221, .28);
+    --line-on-cream: rgba(45, 45, 42, .22);
+    --head: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    --body: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--head); font-weight: 400; line-height: 1.2; margin: 0; text-wrap: balance; }
+  p { margin: 0 0 1em; }
+  p:last-child { margin-bottom: 0; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Draft bar: part of the mock-up file only, not the page ---------- */
+  .draftbar {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--ink); color: var(--cream);
+    font-size: .82rem; line-height: 1.35;
+  }
+  .draftbar .wrap { display: flex; gap: 12px 20px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
+  .draftbar strong { color: var(--gold); letter-spacing: .06em; }
+  .draftbar button {
+    font: 500 .8rem/1 var(--body); letter-spacing: .04em;
+    background: transparent; color: var(--cream);
+    border: 1px solid var(--cream); border-radius: 300px; padding: 8px 14px; cursor: pointer;
+  }
+  .draftbar button[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+  .draftbar button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  /* ---------- Review notes (toggle) ---------- */
+  .note { display: none; }
+  body.notes-on .note {
+    display: block; margin: 14px 0 0; padding: 10px 12px;
+    background: #FFF7D1; color: var(--ink);
+    border-left: 4px solid var(--orange); border-radius: 4px;
+    font: 400 .82rem/1.45 var(--body); letter-spacing: 0; text-transform: none; text-align: left;
+    max-width: 62ch;
+  }
+  body.notes-on .note b { font-weight: 700; }
+  body.notes-on .flag { outline: 2px dashed var(--orange); outline-offset: 6px; border-radius: 2px; }
+  span.flag, a.flag { display: inline-block; }
+  a[href^="tel:"] { white-space: nowrap; }
+  .placeholder { border-bottom: 1px dashed currentColor; font-style: italic; }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-block; text-decoration: none; text-align: center;
+    font: 500 .95rem/1.2 var(--body); letter-spacing: .05em; text-transform: uppercase;
+    background: var(--orange); color: var(--cream);
+    border: 2px solid var(--orange); border-radius: 300px;
+    padding: 1.05em 2.1em;
+    transition: background .15s ease, color .15s ease;
+  }
+  .btn:hover { background: transparent; color: var(--orange); }
+  .on-navy .btn:hover { color: var(--cream); border-color: var(--cream); }
+  .btn:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .btn--small { font-size: .78rem; padding: .95em 1.6em; }
+  .cta-sub { font-size: .9rem; margin-top: 14px; opacity: .85; }
+
+  /* ---------- Header ---------- */
+  .site-header { background: var(--navy); color: var(--cream); }
+  .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 22px; padding-bottom: 22px; }
+  .site-header .logo img { width: 232px; }
+  .site-header nav { display: flex; align-items: center; gap: 28px; }
+  .site-header nav a.text { font-size: .98rem; text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; }
+  .site-header nav a.text:hover { border-bottom-color: var(--cream); }
+
+  /* ---------- Sections ---------- */
+  section { padding: 88px 0; }
+  .on-navy { background: var(--navy); color: var(--cream); }
+  .on-gold { background: var(--gold); color: var(--ink); }
+  .rule-top { border-top: 4px solid var(--orange); }
+  .rule-bottom { border-bottom: 4px solid var(--orange); }
+  .eyebrow { font: 500 .82rem/1.3 var(--body); letter-spacing: .14em; text-transform: uppercase; margin: 0 0 18px; }
+  .on-navy .eyebrow { color: var(--gold); }
+  h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); margin-bottom: 26px; }
+  .lead { font-family: var(--head); font-size: clamp(1.15rem, 1.9vw, 1.4rem); line-height: 1.45; text-wrap: pretty; }
+
+  /* Hero */
+  .hero { padding: 56px 0 0; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: center; padding-bottom: 72px; }
+  .hero h1 { font-size: clamp(2.2rem, 4.6vw, 3.5rem); margin-bottom: 26px; }
+  .hero .lead { margin-bottom: 34px; max-width: 34ch; }
+  .hero-photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+  .hero-photo figcaption { font-size: .88rem; margin-top: 12px; opacity: .85; }
+  .hero-photo { margin: 0; }
+  .facts-row { border-top: 1px solid var(--line-on-navy); }
+  .facts-row ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); }
+  .facts-row li { padding: 26px 28px 30px 0; font-size: .98rem; line-height: 1.45; }
+  .facts-row li + li { padding-left: 28px; border-left: 1px solid var(--line-on-navy); }
+  .facts-row b { display: block; font: 500 1.02rem/1.35 var(--head); color: var(--cream); margin-bottom: 4px; }
+  .facts-row a { text-underline-offset: 3px; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 72px; align-items: start; }
+  .about-copy p { max-width: 58ch; }
+  .factcard { background: var(--paper); border: 1px solid var(--line-on-cream); padding: 30px 32px 12px; }
+  .factcard h3 { font-size: 1.25rem; margin-bottom: 14px; color: var(--navy); font-weight: 500; }
+  .factcard dl { margin: 0; }
+  .factcard .row { display: grid; grid-template-columns: 9.2em 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line-on-cream); font-size: .98rem; line-height: 1.45; }
+  .factcard dt { font-weight: 500; }
+  .factcard dd { margin: 0; overflow-wrap: anywhere; }
+  .factcard small { display: block; font-size: .86rem; opacity: .85; margin-top: 4px; }
+
+  /* How I'm paid */
+  .paid-head { max-width: 780px; margin-bottom: 44px; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { background: var(--cream); color: var(--ink); padding: 30px 28px 32px; }
+  .card h3 { color: var(--orange); font-size: 1.35rem; margin-bottom: 14px; }
+  .card p { font-size: 1.02rem; }
+  .paid-foot { margin-top: 40px; max-width: 70ch; }
+  .paid-foot a { color: var(--gold); text-underline-offset: 3px; }
+
+  /* SOEF hand-off */
+  .soef-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 72px; align-items: start; }
+  .soef-brand img { width: 300px; margin-bottom: 28px; }
+  .soef-brand .eyebrow { margin-bottom: 12px; }
+  .soef-brand h2 { margin-bottom: 0; }
+  .tracks { list-style: none; margin: 26px 0 26px; padding: 0; border-bottom: 1px solid var(--line-on-cream); }
+  .tracks li { display: grid; grid-template-columns: 5.2em 1fr; gap: 16px; padding: 16px 0; border-top: 1px solid var(--line-on-cream); }
+  .tracks .n { font: 500 .82rem/1.9 var(--body); letter-spacing: .14em; text-transform: uppercase; }
+  .tracks b { font: 500 1.12rem/1.3 var(--head); display: block; margin-bottom: 2px; }
+  .balance { font-size: .98rem; }
+  .soef-cta { margin-top: 30px; }
+  .blocktext { font-size: .84rem; line-height: 1.5; margin-top: 34px; padding-top: 20px; border-top: 1px solid var(--line-on-cream); max-width: 78ch; }
+  .blocktext p { margin-bottom: .7em; }
+
+  /* Everyone else */
+  .quiet { padding: 72px 0; }
+  .quiet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
+  .quiet h3 { font-size: 1.4rem; margin-bottom: 14px; color: var(--navy); }
+  .quiet p { max-width: 46ch; }
+  .quiet a { color: var(--navy); font-weight: 500; text-underline-offset: 3px; }
+
+  /* Footer */
+  .site-footer { background: var(--navy); color: var(--cream); padding: 64px 0 56px; }
+  .foot-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid var(--line-on-navy); }
+  .foot-grid img { width: 220px; margin-bottom: 20px; }
+  .foot-grid h4 { font: 500 .8rem/1.3 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 0 0 14px; }
+  .foot-grid ul { list-style: none; margin: 0; padding: 0; font-size: .98rem; }
+  .foot-grid li { margin-bottom: 9px; }
+  .foot-grid a { text-underline-offset: 3px; }
+  .foot-grid address { font-style: normal; font-size: .98rem; line-height: 1.6; }
+  .disclosure { font-size: .8rem; line-height: 1.55; padding-top: 34px; opacity: .92; }
+  .disclosure p { margin-bottom: .9em; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    section { padding: 64px 0; }
+    .hero { padding-top: 36px; }
+    .hero-grid, .about-grid, .soef-grid, .quiet-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-grid { padding-bottom: 48px; }
+    .hero-photo { max-width: 420px; }
+    .cards { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr; gap: 34px; }
+    .facts-row ul { grid-template-columns: 1fr; }
+    .facts-row li, .facts-row li + li { padding: 18px 0; border-left: 0; }
+    .facts-row li + li { border-top: 1px solid var(--line-on-navy); }
+    .hero .lead { max-width: none; }
+  }
+  @media (max-width: 620px) {
+    body { font-size: 1.04rem; }
+    .wrap { padding: 0 20px; }
+    .site-header .logo img { width: 178px; }
+    .site-header nav .btn { display: none; }
+    .btn { display: block; width: 100%; padding-left: 1em; padding-right: 1em; }
+    .factcard { padding: 24px 20px 8px; }
+    .factcard .row { grid-template-columns: 1fr; gap: 2px; }
+    .tracks li { grid-template-columns: 1fr; gap: 2px; }
+    .soef-brand img { width: 240px; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+
+<!-- ============ DRAFT BAR: belongs to this mock-up file only. Do not build in Squarespace. ============ -->
+<div class="draftbar" role="region" aria-label="Mock-up status">
+  <div class="wrap">
+    <span><strong>DRAFT MOCK-UP</strong> &nbsp;For review by the firm's CCO. Not approved for publication.</span>
+    <button type="button" id="notesToggle" aria-pressed="false">Show review notes</button>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header on-navy">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Plan For Your Goals, LLC home"><img src="assets/pfyg-logo-white.png" alt="Plan For Your Goals" width="720" height="179"></a>
+    <nav aria-label="Primary">
+      <a class="text" href="https://www.rightcapital.com/login?cobrand=Zi7CXrBhIY5Lisa3u-LbMA&type=client" target="_blank" rel="noopener">Client login</a>
+      <a class="btn btn--small" href="https://www.secureoneveryfront.com/?utm_source=planforyourgoals.com&utm_medium=referral&utm_campaign=firm-page&utm_content=header" target="_blank" rel="noopener">Visit Secure On Every Front</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero on-navy rule-bottom">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Plan For Your Goals, LLC</p>
+        <h1>The advisory firm behind Secure On Every Front.</h1>
+        <p class="lead">I&rsquo;m David Roberts, CEPA&reg;. Plan For Your Goals, LLC is my firm, a State of Florida registered investment adviser in Gulf Breeze. This page tells you who I am, how I&rsquo;m paid, and where to go next.</p>
+        <a class="btn" href="https://www.secureoneveryfront.com/?utm_source=planforyourgoals.com&utm_medium=referral&utm_campaign=firm-page&utm_content=hero" target="_blank" rel="noopener">Visit Secure On Every Front</a>
+        <p class="cta-sub">For veteran business owners. Takes you to secureoneveryfront.com.</p>
+        <p class="note"><b>Review note 1.</b> One button on the page, used three times, always to the SOEF home page. Each copy carries its own tracking tag (header, hero, program) so you can see which one gets used.</p>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/david-roberts.jpg" alt="David Roberts standing on the shore in Gulf Breeze, Florida" width="760" height="760">
+        <figcaption>David Roberts, CEPA&reg;</figcaption>
+        <p class="note"><b>Review note 2.</b> Photo taken from the current planforyourgoals.com. CEPA&reg; appears only beside your name, never the firm&rsquo;s (decision D55).</p>
+      </figure>
+    </div>
+    <div class="facts-row">
+      <ul>
+        <li><b>Registered investment adviser</b>State of Florida</li>
+        <li><b>Firm CRD 320683</b><a href="https://adviserinfo.sec.gov/firm/summary/320683" target="_blank" rel="noopener">Check the firm&rsquo;s record at adviserinfo.sec.gov</a></li>
+        <li><b>Gulf Breeze, Florida</b>Clients served online</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. ABOUT THE FIRM ============ -->
+<section id="firm">
+  <div class="wrap about-grid">
+    <div class="about-copy">
+      <h2>Who I am and what the firm does</h2>
+      <p>I&rsquo;m the firm&rsquo;s investment adviser representative, its managing member and its Chief Compliance Officer. It is a one-adviser firm. When you work with Plan For Your Goals, you work with me.</p>
+      <p>The firm provides financial planning for households and for business owners, ongoing planning, hourly consulting, and a financial education program. Planning advice is given only under a signed agreement. Nothing on this page is advice for your situation.</p>
+      <p>I&rsquo;m a military spouse. My wife, Teresa Roberts, Col (Ret.) USAF, is the veteran in our house. The firm&rsquo;s planning program for veteran business owners is called Secure On Every Front, and it has its own site.</p>
+      <p class="note"><b>Review note 3.</b> The services sentence follows Form ADV Part 2A Item 4.B as your firm profile records it (11/5/2026 brochure). No fees are quoted here; the page points to the brochure instead. The military-spouse line is stated outright so no reader assumes you served.</p>
+    </div>
+    <aside class="factcard" aria-label="Firm facts">
+      <h3>Firm facts</h3>
+      <dl>
+        <div class="row"><dt>Legal name</dt><dd>Plan For Your Goals, LLC</dd></div>
+        <div class="row"><dt>Registration</dt><dd>State of Florida registered investment adviser<small>Registration does not imply a certain level of skill or training.</small></dd></div>
+        <div class="row"><dt>Adviser</dt><dd>David L. Roberts, CEPA&reg;<small>Individual CRD 7152116</small></dd></div>
+        <div class="row"><dt>Office</dt><dd><span class="flag">5954 E Bay Blvd<br>Gulf Breeze, FL 32563</span></dd></div>
+        <div class="row"><dt>Phone</dt><dd><a href="tel:+18556968284">(855) 696-8284</a></dd></div>
+        <div class="row"><dt>Email</dt><dd><a class="flag" href="mailto:david@secureoneveryfront.com">david@secureoneveryfront.com</a></dd></div>
+        <div class="row"><dt>Brochure</dt><dd><a class="flag" href="https://planforyourgoals.link/ADV" target="_blank" rel="noopener">Form ADV Part 2A</a></dd></div>
+      </dl>
+      <p class="note"><b>Review note 4.</b> Three things to confirm before this goes live. <b>Office:</b> the current site labels this address &ldquo;Branch Office,&rdquo; but the firm has no branch offices on record, so it is shown as the office; confirm it matches the principal office address on Form ADV. <b>Email:</b> this is your standard contact address; the approved footer text names the firm&rsquo;s planforyourgoals.com mailbox for written requests, so that mailbox must keep working after the DNS change. <b>Brochure:</b> confirm the short link serves the 11/5/2026 brochure and does not point at a file stored on the WordPress site.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ 3. HOW I'M PAID ============ -->
+<section class="on-navy rule-top rule-bottom" id="paid">
+  <div class="wrap">
+    <div class="paid-head">
+      <h2>How I&rsquo;m paid, and where my interests can conflict with yours</h2>
+      <p class="lead">You should know this before you hire any adviser. Here it is in plain words.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <h3>Fiduciary advice</h3>
+        <p>When I give planning or investment advice under a signed agreement, I act as a fiduciary. I am required to put your interests first and to tell you about my conflicts of interest.</p>
+      </article>
+      <article class="card">
+        <h3>Fees by invoice</h3>
+        <p>Planning clients pay the firm by invoice. I do not take fees out of client accounts, and I do not hold client money or securities. If a client uses an outside investment manager, that manager deducts its own fee and the firm receives a share of it. That is a conflict of interest.</p>
+      </article>
+      <article class="card">
+        <h3>Insurance</h3>
+        <p>I am also an independent licensed insurance agent and may receive commissions on insurance products. That is a conflict of interest. Insurance recommendations are made as an agent, not as a fiduciary, and no client is required to buy a product through me.</p>
+      </article>
+    </div>
+    <p class="paid-foot">The full detail is in the firm&rsquo;s <a href="https://planforyourgoals.link/ADV" target="_blank" rel="noopener">Form ADV Part 2A</a>. Read it before you decide.</p>
+    <p class="note"><b>Review note 5.</b> This section is why the page can say &ldquo;fiduciary&rdquo; without implying &ldquo;fee-only.&rdquo; It restates Form ADV Items 5, 10.C, 10.D and 15 in first person. It is new wording, not an approved block, so it needs your sign-off against the brochure. No insurance product is promoted, so the INSURANCE-CONFLICT block is not required here.</p>
+  </div>
+</section>
+
+<!-- ============ 4. HAND-OFF TO SECURE ON EVERY FRONT ============ -->
+<section class="on-gold rule-bottom" id="soef">
+  <div class="wrap soef-grid">
+    <div class="soef-brand">
+      <img src="assets/soef-logo.png" alt="Secure On Every Front" width="600" height="210">
+      <p class="eyebrow">For veteran business owners</p>
+      <h2>Your next stop is Secure On Every Front.</h2>
+    </div>
+    <div>
+      <p>Secure On Every Front is the planning program I co-founded with Teresa. It is built for veteran business owners whose household, payroll and future all ride on one company. The work runs in three tracks, in this order.</p>
+      <ul class="tracks">
+        <li><span class="n">Track 1</span><span><b>Mission Capital Blueprint</b>Household security and owner pay.</span></li>
+        <li><span class="n">Track 2</span><span><b>Team Valuation Command</b>A team that carries more of the business, so less depends on the founder.</span></li>
+        <li><span class="n">Track 3</span><span><b>Walk-Away Authority Project</b>A coordinated plan for an eventual exit.</span></li>
+      </ul>
+      <p class="balance">Planning involves trade-offs. Results depend on your business, your household and the market, and no outcome is promised.</p>
+      <div class="soef-cta">
+        <a class="btn" href="https://www.secureoneveryfront.com/?utm_source=planforyourgoals.com&utm_medium=referral&utm_campaign=firm-page&utm_content=program" target="_blank" rel="noopener">Visit Secure On Every Front</a>
+        <p class="cta-sub">You will leave this site and go to secureoneveryfront.com.</p>
+      </div>
+      <div class="blocktext">
+        <p>Secure On Every Front is an education and planning program for veteran business owners, co-founded by David Roberts and Teresa Roberts, Col (Ret.) USAF. Content from Secure On Every Front, the VBO Lab, and its online community is general education only and is not individualized investment, tax, or legal advice.</p>
+        <p>Advisory services are offered by Plan For Your Goals, LLC, a State of Florida Registered Investment Adviser. Insurance products and services are offered and sold through individually licensed and appointed agents.</p>
+      </div>
+      <p class="note"><b>Review note 6.</b> The two small paragraphs above are your approved SOEF block, pasted word for word. The track names are yours and unchanged. The page does not use &ldquo;free&rdquo; or &ldquo;no obligation,&rdquo; so the FREE-REVIEW block is not needed here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. EVERYONE ELSE ============ -->
+<section class="quiet" id="contact">
+  <div class="wrap quiet-grid">
+    <div>
+      <h3>Not a veteran business owner?</h3>
+      <p>Email <a href="mailto:david@secureoneveryfront.com">david@secureoneveryfront.com</a> or call <a href="tel:+18556968284">(855) 696-8284</a> and tell me what you are working on. I will tell you plainly whether the firm is a fit.</p>
+    </div>
+    <div>
+      <h3>Already a client?</h3>
+      <p>Your planning portal has not moved. <a href="https://www.rightcapital.com/login?cobrand=Zi7CXrBhIY5Lisa3u-LbMA&type=client" target="_blank" rel="noopener">Go to client login</a>.</p>
+    </div>
+    <p class="note" style="grid-column: 1 / -1;"><b>Review note 7.</b> This is the quiet side note you chose: plain text links, no second button. The page collects no personal information (no form), so no data-collection notice is needed.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="assets/pfyg-logo-white.png" alt="Plan For Your Goals" width="720" height="179">
+        <address>
+          Plan For Your Goals, LLC<br>
+          5954 E Bay Blvd, Gulf Breeze, FL 32563<br>
+          <a href="tel:+18556968284">(855) 696-8284</a><br>
+          <a href="mailto:david@secureoneveryfront.com">david@secureoneveryfront.com</a>
+        </address>
+      </div>
+      <div>
+        <h4>Firm documents</h4>
+        <ul>
+          <li><a href="https://planforyourgoals.link/ADV" target="_blank" rel="noopener">Form ADV Part 2A</a></li>
+          <li><a href="#privacy-policy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms</a></li>
+          <li><a class="flag" href="https://adviserinfo.sec.gov/firm/summary/320683" target="_blank" rel="noopener">Firm record at adviserinfo.sec.gov</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://www.secureoneveryfront.com/?utm_source=planforyourgoals.com&utm_medium=referral&utm_campaign=firm-page&utm_content=footer" target="_blank" rel="noopener">Secure On Every Front</a></li>
+          <li><a href="https://www.linkedin.com/in/david-roberts-planforyourgoals" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.rightcapital.com/login?cobrand=Zi7CXrBhIY5Lisa3u-LbMA&type=client" target="_blank" rel="noopener">Client login</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note"><b>Review note 8.</b> The old footer&rsquo;s &ldquo;FINRA BrokerCheck&rdquo; link is replaced with the SEC adviser lookup. The firm has no broker-dealer affiliation, and a BrokerCheck link can read as if it does. Your call as CCO. Privacy Policy and Terms stay as two plain pages at their current addresses; the Privacy Policy page still shows the old phone number (850) 786-3400.</p>
+
+    <div class="disclosure flag">
+      <p>Plan For Your Goals, LLC (PFYG), is a State registered investment adviser. PFYG may only transact business in those states in which it is registered or qualifies for an exemption or exclusion from registration requirements. PFYG&rsquo;s web site is limited to the dissemination of general information pertaining to its advisory services, together with access to additional investment-related information, articles written by third parties, firm written newsletters and/or publications, and third-party links. Accordingly, the publication of PFYG&rsquo;s web site on the Internet should not be construed by any consumer and/or prospective client as our Adviser&rsquo;s solicitation to effect, or attempt to effect transactions in securities, or the rendering of personalized investment advice for compensation, over the Internet. Any subsequent, direct communication by the Adviser with a prospective client shall be conducted by a representative that is either registered or qualifies for an exemption or exclusion from registration in the state where the prospective client resides. For information pertaining to the registration status of PFYG, please contact the state securities regulators for those states in which PFYG maintains a registration filing. A copy of PFYG&rsquo;s current written disclosure statement discussing PFYG&rsquo;s business operations, services, and fees is available at the SEC&rsquo;s investment adviser public information website &ndash; www.adviserinfo.sec.gov 320683 or from the Adviser upon written request, <span class="placeholder">[firm email address, exactly as written in the approved WEBSITE block]</span>.</p>
+      <p>Please remember that different types of investments involve varying degrees of risk, and there can be no assurance that the future performance of any specific investment or investment strategy (including those undertaken or recommended by the Adviser), will be profitable or equal any historical performance level(s).</p>
+      <p>This website and information are provided for guidance and information purposes only. Investments involve risk and unless otherwise stated, are not guaranteed. Be sure to first consult with a qualified financial adviser and/or tax professional before implementing any strategy. This website and information are not intended to provide investment, tax, or legal advice.</p>
+      <p>Insurance products and services are offered and sold through individually licensed and appointed insurance agents.</p>
+      <p>Throughout this website we have provided links to various other websites. While PFYG believes this information to be current and valuable to its clients and is reasonably reliable and does not contain untrue statements of material facts, or misleading information. PFYG provides these links on a strictly informational basis only and cannot be held liable for the accuracy, time sensitive nature, or viability of any information shown on these sites. Some content may be dated. All such information is provided solely for convenience purposes only and all users thereof should be guided accordingly.</p>
+      <p>The Testimonials provided is/are not representative of all experiences.</p>
+      <p>The opinions expressed herein are those of the firm and are subject to change without notice. The opinions referenced are as of the date of publication and are subject to change due to changes in the market or economic conditions and may not necessarily come to pass. Any opinions, projections, or forward-looking statements expressed herein are solely those of the author, may differ from the views or opinions expressed by other areas of the firm, and are only for general informational purposes as of the date indicated.</p>
+      <p>Copyright &copy; 2023 Plan For Your Goals, LLC. All rights reserved.</p>
+    </div>
+    <p class="note"><b>Review note 9.</b> The footer text above is your approved WEBSITE block, pasted word for word, including parts that no longer fit a page with no testimonials. I did not edit it. One spot is a placeholder: the firm email address at the end of the first paragraph, which you paste from your own disclosure file. Three items need your decision as CCO: (a) the sentence &ldquo;The Testimonials provided is/are not representative of all experiences,&rdquo; since no testimonials remain; (b) &ldquo;Copyright &copy; 2023&rdquo;; (c) the opening &ldquo;State registered investment adviser,&rdquo; where the live SOEF footer already reads &ldquo;State of Florida registered investment adviser.&rdquo;</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('notesToggle');
+    btn.addEventListener('click', function () {
+      var on = document.body.classList.toggle('notes-on');
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      btn.textContent = on ? 'Hide review notes' : 'Show review notes';
+    });
+    if (/[?&#]notes\b/.test(location.search + location.hash)) btn.click();
+  })();
+</script>
+</body>
+</html>
