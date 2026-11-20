@@ -7,6 +7,9 @@ Files in this folder:
 - `PLAN.md` is this plan.
 - `FAQ-PAY-ANSWER.md` is the corrected FAQ answer on how the firm is paid, ready to paste after your check.
 - `DECISIONS-TO-RECORD.md` holds draft rows for your decisions log.
+- `soef-pilot-mockup.html`, `soef-home-mockup.html` and `soef-applied-mockup.html` are the mock-ups, each one self-contained file. Open one in a browser. The bar at the top moves between the three pages and turns the review notes on and off.
+- `previews/` holds pictures of the same pages at desktop and phone width.
+- `mockup/` holds the source: one body file per page, the shared styles, the images, and the sample Value Briefing you sent. `build.py` rebuilds the pages from it.
 
 ## 1. What was decided
 
@@ -333,7 +336,7 @@ Given on 2026-11-20.
 | 3 | Spoken address | `secureoneveryfront.com/value` |
 | 4 | YouTube channel and explainer | Neither exists yet |
 | 5 | Where applications are tracked | A Google Sheet, plus the email notification |
-| 6 | Sample Value Briefing | Exists. You sent two sample briefings on 2026-11-20 (section 15 records what I checked) |
+| 6 | Sample Value Briefing | Exists. You sent two on 2026-11-20, for "Lee" and "Cameron," co-owners of an invented company. The mock-ups use Lee's, pages 1 and 2 (section 15 records what I checked) |
 | 7 | Terms of use and the agreement | Read at the source. Both apply; the wording is in section 5 |
 | 8 | After the eight weeks | Only what the agreement says (section 5.3) |
 | 9 | VBO Lab | A footer link, and a mention in the reply to owners who are not invited |
@@ -344,7 +347,10 @@ The compliance calls are in section 9.3.
 
 - The four open calls in section 9.3.
 - Whether Squarespace's form storage can write to a Google Sheet directly. I believe it can; confirm in the form's storage settings.
-- A copy of the photo of you and Teresa without the badge.
+- A copy of the photo of you and Teresa without the badge. The mock-ups use the two separate portraits already on your site.
+- The sample briefing: it says "TEST" in the company name but nowhere says "sample," and D43 asks for a sample label. The mock-ups add the label around the image. Decide whether that is enough or the app should print it.
+- Page 5 of both sample PDFs has words broken across lines ("owner's vi ew," "estate de cision"), and page 7 ends with a heading whose text starts on page 8. Fix in the app before the full PDF is posted.
+- The measured time for the online steps. The app's target is under 35 minutes; the pages leave a blank.
 - The firm-page button (section 12, item 7).
 
 ## 14. Order of work
@@ -378,7 +384,7 @@ The compliance calls are in section 9.3.
 16. Decide the firm-page button (section 12, item 7).
 17. Review the numbers at 30 and 90 days.
 
-Mock-ups of the pilot page and the home page are in `mockup/`. A Squarespace build sheet would follow your reaction to them.
+Mock-ups of the pilot page, the home page and the "application received" page are built (see the file list at the top). The copy in them is a first draft and has not been through the full playbook. A Squarespace build sheet would follow your reaction to them.
 
 ## 15. What I could not verify
 
@@ -390,6 +396,8 @@ Mock-ups of the pilot page and the home page are in `mockup/`. A Squarespace bui
 - The Privacy Policy and Terms pages for the site. I found no link to either.
 - Squarespace details: URL mappings, the form's storage and notification options, and the video block's end-screen setting.
 - Any rule against its primary source today.
+
+The sample briefings: I read all 15 pages of Cameron's and the first two of Lee's. Every range and margin I saw is labeled "Test ranges, not market data," and I saw no DealStats or ProSight figure. I did not read pages 3 to 15 of Lee's, which the mock-ups link as the full PDF, so check those pages yourself before it is posted.
 
 Checked since the first draft: the "Veteran Owned Business" badge. I viewed the photo; the badge is on it, and the photo is used on the home page and Meet David & Teresa.
 

@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Business Value First pilot | Secure On Every Front (DRAFT MOCK-UP)</title>
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* Palette and type read from secureoneveryfront.com on 2026-11-19 */
+:root {
+  --navy: #1B365D;
+  --cream: #EAE6DD;
+  --gold: #F0CD5F;
+  --orange: #DA5B37;
+  --ink: #2D2D2A;
+  --paper: #F6F3EC;
+  --line-on-navy: rgba(234, 230, 221, .28);
+  --line-on-cream: rgba(45, 45, 42, .22);
+  --head: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --body: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--body); font-size: 1.1rem; line-height: 1.6; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-underline-offset: 3px; }
+h1, h2, h3, h4 { font-family: var(--head); font-weight: 400; line-height: 1.2; margin: 0; text-wrap: balance; }
+p { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+ul, ol { margin: 0; padding: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.narrow { max-width: 780px; }
+.center { text-align: center; margin-left: auto; margin-right: auto; }
+
+/* ---------- Draft bar and review notes: part of the mock-up file only ---------- */
+.draftbar { position: sticky; top: 0; z-index: 50; background: var(--ink); color: var(--cream); font-size: .82rem; line-height: 1.35; }
+.draftbar .wrap { display: flex; gap: 10px 20px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
+.draftbar strong { color: var(--gold); letter-spacing: .06em; }
+.draftbar .pages a { margin-right: 14px; }
+.draftbar .pages a[aria-current="page"] { color: var(--gold); text-decoration: none; font-weight: 500; }
+.draftbar button { font: 500 .8rem/1 var(--body); letter-spacing: .04em; background: transparent; color: var(--cream); border: 1px solid var(--cream); border-radius: 300px; padding: 8px 14px; cursor: pointer; }
+.draftbar button[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.draftbar button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.note, .notes-only { display: none; }
+body.notes-on .note { display: block; margin: 16px 0 0; padding: 10px 12px; background: #FFF7D1; color: var(--ink); border-left: 4px solid var(--orange); border-radius: 4px; font: 400 .82rem/1.45 var(--body); letter-spacing: 0; text-transform: none; text-align: left; max-width: 68ch; }
+body.notes-on .center > .note, body.notes-on .note.mid { margin-left: auto; margin-right: auto; }
+body.notes-on .note b { font-weight: 700; }
+body.notes-on .notes-only { display: block; }
+.placeholder { border-bottom: 1px dashed currentColor; font-style: italic; }
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-block; text-decoration: none; text-align: center; font: 500 .95rem/1.2 var(--body); letter-spacing: .05em; text-transform: uppercase; background: var(--orange); color: var(--cream); border: 2px solid var(--orange); border-radius: 300px; padding: 1.05em 2.1em; cursor: pointer; transition: background .15s ease, color .15s ease; }
+.btn:hover { background: transparent; color: var(--orange); }
+.on-navy .btn:hover { color: var(--cream); border-color: var(--cream); }
+.btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.on-gold .btn:focus-visible, .on-gold a:focus-visible { outline-color: var(--navy); }
+.btn--small { font-size: .78rem; padding: .95em 1.6em; }
+.btn--quiet { background: transparent; color: var(--navy); border-color: var(--navy); }
+.btn--quiet:hover { background: var(--navy); color: var(--cream); }
+.cta-sub { font-size: .92rem; margin-top: 16px; opacity: .9; }
+.textlink { color: var(--navy); font-weight: 500; }
+.on-navy .textlink { color: var(--gold); }
+
+/* ---------- Header ---------- */
+.site-header { background: var(--cream); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 18px; padding-bottom: 18px; }
+.site-header .logo img { width: 208px; }
+.site-header nav { display: flex; align-items: center; gap: 26px; }
+.site-header nav a.text { font-size: .95rem; text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; white-space: nowrap; }
+.site-header nav a.text:hover, .site-header nav a.text[aria-current="page"] { border-bottom-color: var(--ink); }
+
+/* ---------- Sections ---------- */
+section { padding: 84px 0; }
+.on-navy { background: var(--navy); color: var(--cream); }
+.on-gold { background: var(--gold); color: var(--ink); }
+.on-paper { background: var(--paper); }
+.rule-top { border-top: 4px solid var(--orange); }
+.rule-bottom { border-bottom: 4px solid var(--orange); }
+.eyebrow { font: 500 .82rem/1.3 var(--body); letter-spacing: .14em; text-transform: uppercase; margin: 0 0 18px; }
+.on-navy .eyebrow { color: var(--gold); }
+h2 { font-size: clamp(1.7rem, 3.1vw, 2.4rem); margin-bottom: 24px; }
+h3 { font-size: 1.3rem; }
+.lead { font-family: var(--head); font-size: clamp(1.12rem, 1.8vw, 1.36rem); line-height: 1.5; text-wrap: pretty; }
+.sec-head { max-width: 780px; margin-bottom: 44px; }
+.sec-head.center { margin-left: auto; margin-right: auto; }
+
+/* Hero */
+.hero { padding: 76px 0 0; text-align: center; }
+.hero h1 { font-size: clamp(2.1rem, 4.4vw, 3.3rem); max-width: 21ch; margin: 0 auto 26px; }
+.hero .lead { max-width: 46ch; margin: 0 auto 34px; }
+.hero .cta-sub { margin-bottom: 0; }
+.hero-pad { padding-bottom: 64px; }
+.facts-row { border-top: 1px solid var(--line-on-navy); text-align: left; }
+.facts-row ul { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); }
+.facts-row li { padding: 24px 28px 28px 0; font-size: .98rem; line-height: 1.45; }
+.facts-row li + li { padding-left: 28px; border-left: 1px solid var(--line-on-navy); }
+.facts-row b { display: block; font: 500 1.05rem/1.35 var(--head); margin-bottom: 4px; }
+
+/* Gold call-to-action band */
+.band { padding: 52px 0; text-align: center; }
+.band .lead { max-width: 30ch; margin: 0 auto 24px; }
+
+/* Two columns */
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.two.wide-left { grid-template-columns: 1.15fr .85fr; }
+.copy p { max-width: 60ch; }
+
+/* Check lists */
+.ticks { list-style: none; }
+.ticks li { position: relative; padding: 14px 0 14px 34px; border-top: 1px solid var(--line-on-cream); }
+.ticks li:last-child { border-bottom: 1px solid var(--line-on-cream); }
+.ticks li::before { content: ""; position: absolute; left: 4px; top: 1.5em; width: 14px; height: 2px; background: var(--orange); }
+.on-navy .ticks li { border-color: var(--line-on-navy); }
+.pains { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; max-width: 880px; margin: 0 auto; }
+.pains li { padding: 22px 4px; border-bottom: 1px solid var(--line-on-cream); font-weight: 500; }
+
+/* Sample briefing */
+.sample { margin: 0 auto; max-width: 880px; }
+.sample + .sample { margin-top: 40px; }
+.sample-tag { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; background: var(--navy); color: var(--cream); padding: 10px 16px; font-size: .86rem; }
+.sample-tag b { font: 600 .84rem/1.3 var(--body); letter-spacing: .16em; color: var(--gold); }
+.sample-page { border: 1px solid var(--line-on-cream); border-top: 0; background: #fff; }
+.sample-page img { width: 100%; }
+.sample figcaption { font-size: .9rem; margin-top: 12px; }
+.inside { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 48px; }
+.inside li { border-top: 3px solid var(--orange); padding-top: 14px; font-size: 1rem; line-height: 1.45; }
+.inside b { display: block; font: 500 1.08rem/1.3 var(--head); color: var(--navy); margin-bottom: 6px; }
+.video-slot { border: 2px dashed var(--orange); padding: 34px 24px; text-align: center; font-size: .92rem; max-width: 880px; margin: 0 auto 40px; background: #FFF7D1; }
+
+/* Steps */
+.steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; counter-reset: s; }
+.steps.three { grid-template-columns: repeat(3, 1fr); }
+.steps li { counter-increment: s; background: var(--cream); color: var(--ink); padding: 26px 24px 28px; font-size: 1rem; line-height: 1.5; }
+.steps li::before { content: counter(s); display: block; font: 500 1.9rem/1 var(--head); color: var(--orange); margin-bottom: 14px; }
+.steps b { display: block; font: 500 1.14rem/1.3 var(--head); color: var(--navy); margin-bottom: 8px; }
+.after-steps { margin-top: 34px; max-width: 74ch; }
+
+/* Is / is not */
+.isnot h3 { color: var(--navy); font-weight: 500; margin-bottom: 14px; }
+.terms { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line-on-cream); }
+.terms h3 { color: var(--navy); font-weight: 500; margin-bottom: 12px; }
+.terms .two { gap: 40px 64px; }
+.blocktext { font-size: .84rem; line-height: 1.5; margin-top: 34px; padding-top: 20px; border-top: 1px solid var(--line-on-cream); max-width: 86ch; }
+.on-navy .blocktext { border-top-color: var(--line-on-navy); }
+.blocktext p { margin-bottom: .7em; }
+
+/* People */
+.person { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: start; }
+.person img { width: 200px; height: 200px; object-fit: cover; object-position: 50% 20%; }
+.person h3 { color: var(--navy); font-weight: 500; margin-bottom: 4px; }
+.person .role { font-size: .95rem; margin-bottom: 14px; }
+.people { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.people .person { grid-template-columns: 132px 1fr; gap: 24px; }
+.people .person img { width: 132px; height: 132px; }
+.small { font-size: .92rem; }
+
+/* Tracks */
+.tracks { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.tracks li { background: var(--paper); border: 1px solid var(--line-on-cream); padding: 26px 24px 28px; text-align: center; font-size: 1rem; line-height: 1.5; }
+.tracks img { width: 120px; margin: 0 auto 16px; }
+.tracks .n { font: 500 .78rem/1.4 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--orange); display: block; margin-bottom: 4px; }
+.tracks b { display: block; font: 500 1.16rem/1.3 var(--head); color: var(--navy); margin-bottom: 8px; }
+
+/* Form */
+.apply-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: start; }
+form.apply { background: var(--cream); color: var(--ink); padding: 34px 32px 36px; }
+.field { margin-bottom: 20px; }
+.field label, .field legend { display: block; font: 500 .95rem/1.35 var(--body); margin-bottom: 6px; padding: 0; }
+.field .hint { display: block; font-size: .86rem; line-height: 1.4; margin-top: 6px; }
+.field input[type="text"], .field input[type="email"], .field input[type="tel"], .field select, .field textarea { width: 100%; font: 400 1rem/1.4 var(--body); color: var(--ink); background: #fff; border: 1px solid #8C8A84; border-radius: 4px; padding: 12px 12px; }
+.field textarea { min-height: 96px; resize: vertical; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 3px solid var(--navy); outline-offset: 1px; }
+.field fieldset { border: 0; margin: 0; padding: 0; }
+.radios { display: flex; gap: 22px; flex-wrap: wrap; }
+.radios label { display: inline-flex; align-items: center; gap: 8px; font-weight: 400; margin: 0; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.req { color: #A8401F; }
+.form-foot { font-size: .86rem; line-height: 1.5; margin-top: 18px; }
+
+/* Questions */
+.qa { max-width: 860px; margin: 0 auto; }
+.qa details { border-top: 1px solid var(--line-on-cream); }
+.qa details:last-child { border-bottom: 1px solid var(--line-on-cream); }
+.qa summary { cursor: pointer; padding: 20px 36px 20px 0; font: 500 1.12rem/1.35 var(--head); color: var(--navy); list-style: none; position: relative; }
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary::after { content: "+"; position: absolute; right: 4px; top: 16px; font: 400 1.5rem/1 var(--body); color: var(--orange); }
+.qa details[open] summary::after { content: "\2212"; }
+.qa details p { max-width: 68ch; }
+.qa details > div { padding: 0 0 24px; }
+
+/* Second on-ramp */
+.quiet { padding: 60px 0; }
+.quiet .two { align-items: center; }
+.quiet h3 { color: var(--navy); font-weight: 500; font-size: 1.45rem; margin-bottom: 12px; }
+.quiet img { max-width: 420px; width: 100%; }
+
+/* Footer */
+.site-footer { background: var(--navy); color: var(--cream); padding: 64px 0 56px; }
+.foot-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid var(--line-on-navy); }
+.foot-grid img { width: 230px; margin-bottom: 20px; }
+.foot-grid h4 { font: 500 .8rem/1.3 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 0 0 14px; }
+.foot-grid ul { list-style: none; font-size: .98rem; }
+.foot-grid li { margin-bottom: 9px; }
+.foot-grid address { font-style: normal; font-size: .98rem; line-height: 1.6; }
+a[href^="tel:"] { white-space: nowrap; }
+.disclosure { font-size: .8rem; line-height: 1.55; padding-top: 34px; opacity: .92; }
+.disclosure p { margin-bottom: .9em; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1040px) {
+  .site-header nav a.text { display: none; }
+}
+@media (max-width: 900px) {
+  section { padding: 60px 0; }
+  .hero { padding-top: 52px; }
+  .two, .two.wide-left, .apply-grid, .people { grid-template-columns: 1fr; gap: 40px; }
+  .steps, .steps.three, .inside { grid-template-columns: 1fr 1fr; }
+  .tracks { grid-template-columns: 1fr; }
+  .foot-grid { grid-template-columns: 1fr; gap: 34px; }
+  .facts-row ul { grid-template-columns: 1fr; }
+  .facts-row li, .facts-row li + li { padding: 16px 0; border-left: 0; }
+  .facts-row li + li { border-top: 1px solid var(--line-on-navy); }
+  .pains { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  body { font-size: 1.04rem; }
+  .wrap { padding: 0 20px; }
+  .site-header .logo img { width: 160px; }
+  .site-header nav .btn { font-size: .7rem; padding: .9em 1.2em; }
+  .btn { display: block; width: 100%; padding-left: 1em; padding-right: 1em; }
+  .site-header nav .btn { display: inline-block; width: auto; }
+  .steps, .steps.three, .inside { grid-template-columns: 1fr; }
+  .person, .people .person { grid-template-columns: 1fr; gap: 16px; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+  form.apply { padding: 26px 20px 28px; }
+  .sample-tag { font-size: .8rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+
+</style>
+</head>
+<body>
+
+<!-- ============ DRAFT BAR: belongs to this mock-up file only. Do not build in Squarespace. ============ -->
+<div class="draftbar" role="region" aria-label="Mock-up status">
+  <div class="wrap">
+    <span><strong>DRAFT MOCK-UP</strong> &nbsp;Draft for the firm&rsquo;s CCO. Not signed off for publication.</span>
+    <span class="pages"><a href="index.html">Home</a><a href="business-value-first.html" aria-current="page">Pilot page</a><a href="applied.html">Application received</a></span>
+    <button type="button" id="notesToggle" aria-pressed="false">Show review notes</button>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Secure On Every Front home"><img src="assets/soef-logo.png" alt="Secure On Every Front" width="600" height="210"></a>
+    <nav aria-label="Primary">
+      <a class="text" href="business-value-first.html" aria-current="page">Business Value First</a>
+      <a class="text" href="#program-note">The Program</a>
+      <a class="text" href="https://www.secureoneveryfront.com/david-teresa">Meet David &amp; Teresa</a>
+      <a class="text" href="https://www.secureoneveryfront.com/guides">Guides</a>
+      <a class="text" href="https://www.secureoneveryfront.com/faq">FAQ</a>
+      <a class="btn btn--small" href="business-value-first.html#apply">Apply for the pilot</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero on-navy rule-bottom">
+  <div class="wrap">
+    <div class="hero-pad">
+      <p class="eyebrow">Business Value First &middot; Pilot &middot; by Plan For Your Goals, LLC</p>
+      <h1>See what your business may be worth, and what is holding that back.</h1>
+      <p class="lead">A set of guided steps you complete online, a written Value Briefing, and a conversation with David Roberts about what it shows. You get an estimated value range for planning and one clear place to start.</p>
+      <a class="btn" href="#apply">Apply for the pilot</a>
+      <p class="cta-sub">An estimate for planning. Not an appraisal or a valuation.</p>
+      <p class="note mid"><b>Review note 1.</b> Draft headline and lead, for direction only. &ldquo;May be worth&rdquo; and &ldquo;estimated&rdquo; are deliberate. CEPA&reg; is kept out of the hero on purpose: your decision D42 says no sentence ties an app figure or the method to the credential, so it appears only beside your name in &ldquo;Who you work with.&rdquo; The address to say in videos, secureoneveryfront.com/value, forwards to this page.</p>
+    </div>
+    <div class="facts-row">
+      <ul>
+        <li><b>No fee</b>Taking part does not require you to buy anything, now or later.</li>
+        <li><b>Eight weeks</b>Online steps, a written briefing, and a walk-through of about 45 minutes.</li>
+        <li><b>About ten owners</b>By invitation, after a short application.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. THE BRIDGE ============ -->
+<section>
+  <div class="wrap two wide-left">
+    <div class="copy">
+      <h2>You built it. Most of it still runs through you.</h2>
+      <p>Owners at your stage tend to want the same two things: some of their time back, and a company that can make a decision without them in the room.</p>
+      <p>The things that keep you in every decision are often the same things buyers, lenders and contracting officers look at when they size up a business like yours. Who holds the customer relationships. What is written down. How steady the profit is. What happens to your certifications if you step away.</p>
+      <p>Business Value First puts those in front of you in one place, in plain words, alongside what the business means for your household.</p>
+    </div>
+    <div>
+      <ul class="ticks">
+        <li>Where the business depends on you today</li>
+        <li>An estimated value range, and what moves it</li>
+        <li>How much of your household&rsquo;s future rests on the company</li>
+        <li>One first area to work on, with a 90-day first step</li>
+      </ul>
+      <p class="note"><b>Review note 2.</b> Leads with what Sarah says she wants (time back, a business that runs without her), then bridges to value. &ldquo;Buyers, lenders and contracting officers often look at&rdquo; mirrors the opening line of the Value Briefing itself, so the page claims no more than the app does.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. THE SAMPLE VALUE BRIEFING ============ -->
+<section class="on-paper" id="sample">
+  <div class="wrap">
+    <div class="sec-head center" style="text-align:center">
+      <h2>What you receive: a Value Briefing</h2>
+      <p>A written briefing prepared for you from your own answers and figures. Here is what is in it, and two pages from a sample.</p>
+    </div>
+
+    <ul class="inside">
+      <li><b>Three gauges</b>Buyer&rsquo;s View, Transfer Readiness and Household Readiness. Each is a share of possible points, not a grade.</li>
+      <li><b>A value range and the gaps</b>An estimated range, with the Value Gap, Profit Gap and Wealth Gap worked out beside it.</li>
+      <li><b>Top three findings</b>What was seen, why it matters, a first step, and who usually helps.</li>
+      <li><b>Questions to take with you</b>For your CPA, your attorney, and your own planning.</li>
+    </ul>
+
+    <div class="video-slot notes-only"><b>Explainer video goes here</b> once it exists: two to three minutes of you describing the pilot. The page launches without it, and the sample below carries this section until then. This box is not part of the page.</div>
+
+    <figure class="sample">
+      <div class="sample-tag"><b>SAMPLE</b><span>Invented business and test figures. Not a client&rsquo;s results.</span></div>
+      <a class="sample-page" href="assets/sample-page-1.png" target="_blank" rel="noopener" style="display:block"><img src="assets/sample-page-1.png" alt="Sample Value Briefing, page 1 of 15: an at-a-glance page for an invented company, showing the owner's goal for the next 12 months, three gauges with their scores, the top three findings and a first 90-day move. A note under the gauges reads: share of possible points in each view, not a grade, a valuation or a prediction of a sale." width="935" height="1210"></a>
+    </figure>
+
+    <figure class="sample">
+      <div class="sample-tag"><b>SAMPLE</b><span>Test ranges, not market data.</span></div>
+      <a class="sample-page" href="assets/sample-page-2.png" target="_blank" rel="noopener" style="display:block"><img src="assets/sample-page-2.png" alt="Sample Value Briefing, page 2 of 15: an estimated business value range for an invented company, with a table of the Value Gap, Profit Gap, Wealth Gap and monthly household gap. Notes under the range give the inputs and source as test ranges, not market data, and state that this is a mathematical estimate, not an appraisal, valuation, or a guarantee of marketability or sale price." width="935" height="1210"></a>
+      <figcaption>Sample only. The business, the owner and every figure were invented for illustration. Select a page to open it full size, or <a class="textlink" href="assets/sample-value-briefing.pdf" target="_blank" rel="noopener">read the full 15-page sample (PDF)</a>, which carries all of its notes.</figcaption>
+    </figure>
+
+    <p class="note mid"><b>Review note 3.</b> These are pages 1 and 2 of the &ldquo;Lee&rdquo; briefing you sent, shown whole and unedited so each note stays beside its figure (D43, D50). I chose Lee over Cameron because Lee&rsquo;s goal is &ldquo;More profit,&rdquo; which sits closer to Sarah than Cameron&rsquo;s &ldquo;A sale or transition.&rdquo; Three things for you to decide: (1) the PDF itself says &ldquo;TEST&rdquo; in the company name but nowhere says &ldquo;sample&rdquo;; the label here is added around the image, not on it, and D43 asks for the sample to be labeled. (2) Page 5 of both PDFs has words broken across lines (&ldquo;owner&rsquo;s vi ew,&rdquo; &ldquo;estate de cision&rdquo;), which should be fixed in the app before the full PDF is posted. (3) On a phone the pages are too small to read without opening them, which is why each opens full size.</p>
+  </div>
+</section>
+
+<!-- ============ 4. HOW THE PILOT WORKS ============ -->
+<section class="on-navy" id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How the pilot works</h2>
+      <p>Eight weeks from the day the agreement is signed.</p>
+    </div>
+    <ol class="steps">
+      <li><b>Apply</b>A short form. David reviews it and replies within three business days.</li>
+      <li><b>Sign the pilot agreement</b>If you are invited, you receive the firm&rsquo;s Form ADV brochure and privacy notice, and sign a Pilot Planning Agreement with Plan For Your Goals, LLC. There is no fee.</li>
+      <li><b>Complete the steps online</b>Thirteen questions in your own words, some facts and figures about the business, and scores you confirm. About <span class="placeholder">[your measured time]</span> in all.</li>
+      <li><b>Receive your Value Briefing</b>David reviews your answers, issues the briefing, and walks you through it in about 45 minutes, with a shorter follow-up.</li>
+    </ol>
+    <p class="after-steps">The app is in a testing phase, and that is the point of a pilot. David will ask for your feedback on it, including in a short interview. Answering is optional.</p>
+    <p class="note"><b>Review note 4.</b> Every step is taken from Pilot Planning Agreement r2, &sect;3, &sect;10 and &sect;12, and the three-business-day reply is your answer of 2026-11-20. The time for the online steps is a blank: the app&rsquo;s target is under 35 minutes for the whole flow, but a target is not a measurement, so use the figure from your pilot timing page once you have one.</p>
+  </div>
+</section>
+
+<!-- ============ 5. WHAT IT IS AND IS NOT ============ -->
+<section id="terms">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What it is, and what it is not</h2>
+    </div>
+    <div class="two isnot">
+      <div>
+        <h3>It is</h3>
+        <ul class="ticks">
+          <li>Planning advice about your business and your household, based on what you tell the firm.</li>
+          <li>An estimated value range, built from your profit and a range of multiples, with the basis and date shown beside each figure.</li>
+          <li>A first area to work on, and questions to take to your CPA and attorney.</li>
+          <li>Yours to keep, and to take to any other professional.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>It is not</h3>
+        <ul class="ticks">
+          <li>An appraisal or a valuation, or a tax or legal opinion.</li>
+          <li>For setting a price or terms for a sale, a buy-sell agreement or a loan, or for a tax or legal decision. Those call for a credentialed appraiser, your CPA and your attorney.</li>
+          <li>A recommendation to buy or sell any security or insurance product.</li>
+          <li>A prediction or promise of any sale price, value, multiple, profit, tax result, certification outcome, contract award or timing.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="terms">
+      <div class="two">
+        <div>
+          <h3>What it costs</h3>
+          <p>There is no fee for the pilot. Taking part does not require you to buy anything, now or later. During or after the pilot, David may describe the firm&rsquo;s paid services, and you are free to decline.</p>
+          <h3 style="margin-top:28px">What you agree to</h3>
+          <p>You use the app under its Terms of Use, Privacy Policy and pilot terms. Access to the app itself is educational. David&rsquo;s review of your answers, your Value Briefing and your meetings with him are planning advice under the Pilot Planning Agreement you sign with Plan For Your Goals, LLC.</p>
+        </div>
+        <div>
+          <h3>Where our interests can differ from yours</h3>
+          <p>Your Value Briefing may suggest one of the firm&rsquo;s paid services as a next step, including its Track 1: Mission Capital Blueprint planning service. The firm earns a fee if you enroll. You are free to decline, and you may take your briefing to any other professional.</p>
+          <p>The briefing looks at whether the business and your household are protected if you become disabled, die or are away for a long time, and it may point to insurance as an area to work on. David Roberts is also an independent licensed insurance agent and may receive commissions if you buy an insurance product through him. An insurance sale is made by him as an insurance agent, not as a fiduciary investment adviser. You are never required to buy any product through him.</p>
+          <p>The firm&rsquo;s <a class="textlink" href="https://planforyourgoals.link/ADV">Form ADV Part 2A</a> describes both conflicts and how the firm addresses them.</p>
+        </div>
+      </div>
+      <div class="blocktext">
+        <p>Although the firm does not charge a fee for attending the appointment and this appointment offers the attendees educational information, the appointment is intended to result in the attendee purchasing a product or establishing an advisory relationship.</p>
+      </div>
+      <p class="note"><b>Review note 5.</b> &ldquo;What it costs&rdquo; uses the wording of agreement &sect;4, as D45 directs; &ldquo;no obligation&rdquo; is not used. The two conflicts are &sect;5 in close paraphrase, with &ldquo;PFYG&rsquo;s personnel&rdquo; changed to your name. The small paragraph above this note is your FREE-REVIEW block, word for word, placed here by your decision of 2026-11-20. The &ldquo;it is not&rdquo; list draws on &sect;3 and &sect;7 and the briefing&rsquo;s own &ldquo;Important information.&rdquo;</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. WHO IT IS FOR ============ -->
+<section class="on-gold rule-top rule-bottom" id="who">
+  <div class="wrap two">
+    <div>
+      <h2>Who the pilot is for</h2>
+      <ul class="ticks">
+        <li>Your business is veteran-owned and mostly sells services.</li>
+        <li>You have roughly 4 to 50 employees.</li>
+        <li>The company has grown, and most decisions still come back to you.</li>
+        <li>You can give it a few sittings over eight weeks, and you are willing to say what worked and what did not.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Who it is not for</h2>
+      <ul class="ticks">
+        <li>You need a number for a sale, a tax filing, a loan or a legal matter. That calls for a credentialed appraiser.</li>
+        <li>You have not started the business yet, or it is a nonprofit, or it is outside the United States.</li>
+      </ul>
+      <p style="margin-top:22px">The pilot takes about ten owners. Not every applicant can be invited.</p>
+      <p class="note"><b>Review note 6.</b> &ldquo;About ten owners&rdquo; is your answer of 2026-11-20 and is the basis for any limited-seats wording; there is no closing date and none is implied. The &ldquo;not for&rdquo; lines come from the app&rsquo;s own out-of-scope list and from D4. Take the form down, or turn it into a waiting list, when the tenth owner signs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. WHO YOU WORK WITH ============ -->
+<section id="david">
+  <div class="wrap">
+    <div class="person narrow">
+      <img src="assets/david.jpg" alt="David Roberts" width="360" height="360">
+      <div>
+        <p class="eyebrow">Who you work with</p>
+        <h3>David Roberts, CEPA&reg;</h3>
+        <p class="role">Plan For Your Goals, LLC, a State of Florida Registered Investment Adviser (Gulf Breeze, FL)</p>
+        <p>David does all of the advisory work in the pilot: he reviews your answers, prepares your Value Briefing and meets with you. He is an investment adviser representative of Plan For Your Goals, LLC and an independent licensed insurance agent. He is a military spouse, and he works with veteran business owners online, wherever they are.</p>
+        <p class="note"><b>Review note 7.</b> David only, as D46 requires; Teresa does not appear on this page. CEPA&reg; sits beside your name and nowhere near a figure. Both capacities are stated, as D36 asks wherever the adviser title and insurance appear together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. APPLY ============ -->
+<section class="on-navy rule-top" id="apply">
+  <div class="wrap apply-grid">
+    <div>
+      <p class="eyebrow">Apply for the pilot</p>
+      <h2>A short application.</h2>
+      <p>This form tells David whether the pilot is a fit. It is not the assessment, and nothing you enter here is scored.</p>
+      <p>You will hear back within three business days, whether or not you are invited.</p>
+      <p class="small">Please leave out account numbers, tax IDs, financial statements and anything about your health. None of it is needed to apply.</p>
+      <div class="blocktext">
+        <p>Secure On Every Front is an education and planning program for veteran business owners, co-founded by David Roberts and Teresa Roberts, Col (Ret.) USAF. Content from Secure On Every Front, the VBO Lab, and its online community is general education only and is not individualized investment, tax, or legal advice.</p>
+        <p>Advisory services are offered by Plan For Your Goals, LLC, a State of Florida Registered Investment Adviser. Insurance products and services are offered and sold through individually licensed and appointed agents.</p>
+      </div>
+      <p class="note"><b>Review note 8.</b> Both paragraphs of your SOEF block, word for word, beside the main action. The form carries no QUESTIONNAIRE block (your decision of 2026-11-20: it screens fit, and no recommendation is based on it). Submissions go to you by email and to a Google Sheet.</p>
+    </div>
+
+    <form class="apply" action="applied.html" method="get">
+      <div class="field-row">
+        <div class="field"><label for="f-name">Your name <span class="req">(required)</span></label><input id="f-name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="f-company">Company name <span class="req">(required)</span></label><input id="f-company" type="text" autocomplete="organization" required></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="f-email">Email <span class="req">(required)</span></label><input id="f-email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="f-phone">Phone <span class="small">(optional)</span></label><input id="f-phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="field">
+        <label for="f-state">State where you live <span class="req">(required)</span></label>
+        <select id="f-state" required>
+          <option value="">Choose a state</option>
+          <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>District of Columbia</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
+        </select>
+        <span class="hint">We ask for your state because the firm can work with only a limited number of owners in some states.</span>
+      </div>
+      <div class="field">
+        <fieldset>
+          <legend>Is the business veteran-owned? <span class="req">(required)</span></legend>
+          <div class="radios"><label><input type="radio" name="vet" required> Yes</label><label><input type="radio" name="vet"> No</label></div>
+        </fieldset>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-emp">Employees <span class="req">(required)</span></label>
+          <select id="f-emp" required><option value="">Choose a range</option><option>1 to 3</option><option>4 to 10</option><option>11 to 25</option><option>26 to 50</option><option>More than 50</option></select>
+        </div>
+        <div class="field">
+          <label for="f-rev">Annual revenue <span class="req">(required)</span></label>
+          <select id="f-rev" required><option value="">Choose a range</option><option>Under $1 million</option><option>$1 million to $5 million</option><option>$5 million to $10 million</option><option>$10 million to $25 million</option><option>More than $25 million</option></select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-why">What made you want to look at this now? <span class="req">(required)</span></label>
+        <textarea id="f-why" required></textarea>
+      </div>
+      <div class="field">
+        <label for="f-source">How did you hear about the pilot? <span class="small">(optional)</span></label>
+        <select id="f-source"><option value="">Choose one</option><option>A YouTube video</option><option>LinkedIn</option><option>Facebook or VBO Lab</option><option>Someone referred me</option><option>Something else</option></select>
+      </div>
+      <button class="btn" type="submit">Send my application</button>
+      <p class="form-foot">Your application goes to David Roberts at Plan For Your Goals, LLC and is used only to review and answer it, as the <span class="placeholder">[Privacy Policy link]</span> describes.</p>
+      <p class="form-foot">I take cybersecurity seriously, and I implement measures to protect your information. However, it&rsquo;s important to remain vigilant about potential cyber threats.</p>
+      <p class="note"><b>Review note 9.</b> State is required because it is your client-count control (D41, D47, D51), and the line under it is the plain explanation you chose. Revenue and employees are ranges, never exact figures. The last line is the SITE-CYBER text from the old firm site, word for word; your disclosure file lists it as found on that site and not yet in the firm&rsquo;s master file, so approve it there before it is used. The sentence above it on how the application is used is mine and should match the Privacy Policy you link. In this mock-up the button goes straight to the &ldquo;application received&rdquo; page.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 9. PILOT QUESTIONS ============ -->
+<section id="questions">
+  <div class="wrap">
+    <div class="sec-head center" style="text-align:center"><h2>Questions owners ask first</h2></div>
+    <div class="qa">
+      <details open>
+        <summary>What does it cost?</summary>
+        <div><p>There is no fee. You will not be billed, and taking part does not require you to buy anything, now or later.</p></div>
+      </details>
+      <details>
+        <summary>How much time does it take?</summary>
+        <div><p>The online steps take about <span class="placeholder">[your measured time]</span>, and you can stop and come back. The walk-through of your Value Briefing is about 45 minutes, with a shorter follow-up and a short feedback interview. The pilot runs eight weeks in all.</p></div>
+      </details>
+      <details>
+        <summary>What information will you ask for?</summary>
+        <div><p>Your own account of the business, your household and your plans, plus figures such as revenue, profit and owner pay from your last full year. You will not be asked for Social Security numbers, account or card numbers, tax IDs, passwords, the names of your employees or customers, or anything about a medical condition.</p></div>
+      </details>
+      <details>
+        <summary>What happens when the eight weeks end?</summary>
+        <div><p>The pilot agreement ends. Your Value Briefing is yours to keep and to take to any other professional. Your access to the app may end. David may describe the firm&rsquo;s paid services, and you are free to decline.</p></div>
+      </details>
+      <details>
+        <summary>Do I have to become a client afterward?</summary>
+        <div><p>No. Taking part does not require you to buy anything or to continue with the firm. During the pilot itself you are a client of Plan For Your Goals, LLC under the pilot agreement, which is why you receive the firm&rsquo;s Form ADV brochure before you sign.</p></div>
+      </details>
+      <details>
+        <summary>Is this a valuation of my business?</summary>
+        <div><p>No. The Value Briefing gives an estimated range for planning, built from your profit and a range of multiples. It is not an appraisal or a valuation, and it should not be used to set a price or terms for a sale, a buy-sell agreement or a loan, or for a tax or legal decision. Those call for a credentialed appraiser, your CPA and your attorney.</p></div>
+      </details>
+    </div>
+    <p class="note mid"><b>Review note 10.</b> Each answer is drawn from the agreement: cost from &sect;4, information from &sect;6, the end of the pilot from &sect;3, &sect;4 and &sect;12 (your choice to say only what the agreement says), and the valuation answer from &sect;3 and the briefing&rsquo;s closing note. &ldquo;Do I have to become a client&rdquo; is answered carefully because a pilot owner is a client for the eight weeks.</p>
+  </div>
+</section>
+
+<!-- ============ 10. SECOND ON-RAMP ============ -->
+<section class="quiet on-paper">
+  <div class="wrap two">
+    <div>
+      <h3>Not ready to apply?</h3>
+      <p>Start smaller. The Readiness Review is thirteen questions about your household, your team and your plans, answered in your own words. Most owners finish in about 20 minutes.</p>
+      <p><a class="textlink" href="https://www.secureoneveryfront.com/review">Take the Readiness Review</a></p>
+      <p class="note"><b>Review note 11.</b> The second on-ramp: one sentence and a text link, no button, so it does not compete with the application. It says nothing about cost, so FREE-REVIEW is not triggered here. This section comes off the page the day Door 1 opens.</p>
+    </div>
+    <div><img src="assets/review.jpg" alt="A printed Readiness Review report on a desk" width="700" height="467"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="assets/soef-logo-white.png" alt="Secure On Every Front" width="750" height="262">
+        <address>
+          <a href="mailto:david@secureoneveryfront.com">david@secureoneveryfront.com</a><br>
+          <a href="tel:+18556968284">+1 (855) 696-8284</a><br>
+          Gulf Breeze, Florida
+        </address>
+      </div>
+      <div>
+        <h4>Secure On Every Front</h4>
+        <ul>
+          <li><a href="business-value-first.html">Business Value First pilot</a></li>
+          <li><a href="#program-note">The Program</a></li>
+          <li><a href="https://www.secureoneveryfront.com/review">Readiness Review</a></li>
+          <li><a href="https://www.secureoneveryfront.com/david-teresa">Meet David &amp; Teresa</a></li>
+          <li><a href="https://www.secureoneveryfront.com/guides">Money &amp; Mission Guides</a></li>
+          <li><a href="https://www.secureoneveryfront.com/faq">FAQ</a></li>
+          <li><a href="https://www.secureoneveryfront.com/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://planforyourgoals.link/VBOlab">VBO Lab community</a></li>
+          <li><span class="placeholder">[YouTube channel link, once the channel exists]</span></li>
+          <li><a href="https://www.linkedin.com/in/david-roberts-planforyourgoals/">LinkedIn</a></li>
+          <li><a href="https://www.facebook.com/VeteranBusinessOwnerLab/">Facebook</a></li>
+        </ul>
+        <h4 style="margin-top:22px">Firm documents</h4>
+        <ul>
+          <li><a href="https://planforyourgoals.link/ADV">Form ADV Part 2A</a></li>
+          <li><span class="placeholder">[Privacy Policy link]</span></li>
+          <li><span class="placeholder">[Terms link]</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note"><b>Footer note.</b> New here: the VBO Lab link, the YouTube slot, the Privacy Policy and Terms links (none was found on the live pages), and the david@ address in place of support@. Instagram is on the live footer and can stay; it is left out here only to keep the list short.</p>
+
+    <div class="disclosure">
+      <p>Secure On Every Front is an education and planning program for veteran business owners, co-founded by David Roberts and Teresa Roberts, Col (Ret.) USAF. Content from Secure On Every Front, the VBO Lab, and its online community is general education only and is not individualized investment, tax, or legal advice.</p>
+      <p>Plan For Your Goals, LLC (PFYG), is a State of Florida registered investment adviser. PFYG may only transact business in those states in which it is registered or qualifies for an exemption or exclusion from registration requirements. PFYG&rsquo;s web site is limited to the dissemination of general information pertaining to its advisory services, together with access to additional investment-related information, articles written by third parties, firm written newsletters and/or publications, and third-party links. Accordingly, the publication of PFYG&rsquo;s web site on the Internet should not be construed by any consumer and/or prospective client as our Adviser&rsquo;s solicitation to effect, or attempt to effect transactions in securities, or the rendering of personalized investment advice for compensation, over the Internet. Any subsequent, direct communication by the Adviser with a prospective client shall be conducted by a representative that is either registered or qualifies for an exemption or exclusion from registration in the state where the prospective client resides. For information pertaining to the registration status of PFYG, please contact the state securities regulators for those states in which PFYG maintains a registration filing. A copy of PFYG&rsquo;s current written disclosure statement discussing PFYG&rsquo;s business operations, services, and fees is available at the SEC&rsquo;s investment adviser public information website &ndash; www.adviserinfo.sec.gov 320683 or from the Adviser upon written request, <span class="placeholder">[firm email address, exactly as written in the approved WEBSITE block]</span>.</p>
+      <p>Please remember that different types of investments involve varying degrees of risk, and there can be no assurance that the future performance of any specific investment or investment strategy (including those undertaken or recommended by the Adviser), will be profitable or equal any historical performance level(s).</p>
+      <p>This website and information are provided for guidance and information purposes only. Investments involve risk and unless otherwise stated, are not guaranteed. Be sure to first consult with a qualified financial adviser and/or tax professional before implementing any strategy. This website and information are not intended to provide investment, tax, or legal advice.</p>
+      <p>Insurance products and services are offered and sold through individually licensed and appointed insurance agents.</p>
+      <p>Throughout this website we have provided links to various other websites. While PFYG believes this information to be current and valuable to its clients and is reasonably reliable and does not contain untrue statements of material facts, or misleading information. PFYG provides these links on a strictly informational basis only and cannot be held liable for the accuracy, time sensitive nature, or viability of any information shown on these sites. Some content may be dated. All such information is provided solely for convenience purposes only and all users thereof should be guided accordingly.</p>
+      <p>The opinions expressed herein are those of the firm and are subject to change without notice. The opinions referenced are as of the date of publication and are subject to change due to changes in the market or economic conditions and may not necessarily come to pass. Any opinions, projections, or forward-looking statements expressed herein are solely those of the author, may differ from the views or opinions expressed by other areas of the firm, and are only for general informational purposes as of the date indicated.</p>
+      <p>Copyright &copy; 2026 Plan For Your Goals, LLC. All rights reserved.</p>
+    </div>
+    <p class="note"><b>Disclosure note.</b> First paragraph: your SOEF block, first paragraph, word for word. The rest: your WEBSITE block as amended on 2026-11-19 for planforyourgoals.com, which you decided on 2026-11-20 to use on this site too. The firm email inside it is left as a marked placeholder; paste the block from your own disclosure file when you build.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('notesToggle');
+    btn.addEventListener('click', function () {
+      var on = document.body.classList.toggle('notes-on');
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      btn.textContent = on ? 'Hide review notes' : 'Show review notes';
+    });
+    if (/[?&#]notes\b/.test(location.search + location.hash)) btn.click();
+  })();
+</script>
+</body>
+</html>
