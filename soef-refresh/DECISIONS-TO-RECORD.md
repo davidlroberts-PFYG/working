@@ -19,6 +19,26 @@ Use your next free D-numbers. The last one in the file I read was D60, and the f
 | D__ | 2026-11-20 | **The pilot is stated publicly as about ten owners, with no closing date.** This is the basis for any "limited seats" wording. The form comes down, or becomes a waiting list, when the tenth owner signs. | Playbook Step 4 (urgency only if real). The app's pilot plan sets 8 to 12 owners. |
 | D__ | 2026-11-20 | **No client testimonial or owner feedback is used on the refreshed site.** | Pilot Planning Agreement §10 (no quoting or marketing use without separate signed consent); only one TESTIMONIAL variant exists (disclosures gap 4). Suggested as a row so the next session does not reopen it. |
 
+## Decided 2026-11-21
+
+| # | Date | Decision | Basis |
+|---|---|---|---|
+| D__ | 2026-11-21 | **A sample Value Briefing used in marketing carries a "Sample" label printed by the app itself, on every page of the PDF** (clarifies D43, condition 2). A label added around the briefing by the page it sits on is not enough on its own, because the PDF or a page image can be opened without it. Until the app prints the label, the full sample PDF is not linked from any page. Suggested: the app allows the label only on a test business with no signed agreement recorded, and refuses it if a DealStats or ProSight figure would print (D50). The app's project guide (rule 12) asks for a row here the day the wording is approved. | D43; D50. The two sample briefings reviewed 2026-11-20 say "TEST" in the company name and nowhere say "sample." |
+
+## Waiting on your answer
+
+| Item | What is needed |
+|---|---|
+| **SITE-CYBER** | The sentence "I take cybersecurity seriously, and I implement measures to protect your information. However, it's important to remain vigilant about potential cyber threats." is listed in `disclosures.md` as found on the old firm site and not in the firm's master file. To use it under the pilot form: approve it as a firm block, as written or in a firm-voice form, and enter the written security policy that backs it in the substantiation log. |
+
+## Suggested new open item
+
+| # | Item | Why it matters | Owner |
+|---|---|---|---|
+| O__ | **The filed brochure says nothing about AI.** Form ADV Part 2A (version date 11/5/2026) describes Business Value Planning and "the firm's Business Value First software tool" but does not mention artificial intelligence. The draft language in the app's repository (`docs/form-adv-2a-draft-2026-11.md`, paragraph 2) had an AI paragraph that is not in the filing. The app, its AI notice, and now the pilot page all tell owners that AI summarizes answers and suggests scores. | What the firm says in one place should match what it says in another. Whether the brochure needs the paragraph is a question for Comply. | David → Comply; could ride with the O19 questions |
+
+Also seen in the filed brochure while checking, for the 2027 amendment list: Item 5.B still contains a bracketed drafting note ("[Note: Credit card payment is not recommended because it is typically deemed custody of client assets.]"); Item 2 reads "has added has removed Pacific Financial Group"; and the education fee reads "Fixed fee of $125" with no "per month." Neither SHARP Leadership nor C2H is mentioned anywhere in it.
+
 ## Not compliance decisions, recorded for the build
 
 - Pilot applications: reply within three business days; tracked in a Google Sheet.

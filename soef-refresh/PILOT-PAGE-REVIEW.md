@@ -13,7 +13,7 @@ Severity as the playbook defines it. "Applied" means the mock-up now carries the
 | # | Severity | What | Why | Status |
 |---|---|---|---|---|
 | 1 | **BLOCK** | Five placeholders: Privacy Policy link, Terms link, the measured time for the online steps (two places), the firm email inside the footer block, the YouTube link | The form collects personal data, so the Privacy Policy link must be real. A page cannot go live with blanks. Step 8 (WEBSITE, WARRANTIES) | Open. Yours to supply |
-| 2 | **BLOCK** | The link to the full 15-page sample PDF | Opened on its own, the PDF nowhere says "sample"; it says "TEST" in the company name only. D43 condition 2. Page 5 also has words broken across lines | Link removed from both pages until the app prints a sample label and the defect is fixed |
+| 2 | **BLOCK** | The link to the full 15-page sample PDF | Opened on its own, the PDF nowhere says "sample"; it says "TEST" in the company name only. D43 condition 2. Page 5 also has words broken across lines | Link removed from both pages. **Decided 2026-11-21: the app will print a sample label.** The link returns when it does and the defect is fixed |
 | 3 | FIX | Sample page images opened full size lose the "SAMPLE" label, which sat in the page around them | D43 condition 2: the label has to travel with the sample | Applied. A navy "SAMPLE" strip is now part of each image file, added above the page. The briefing page itself is unedited |
 | 4 | FIX | Headline: "Eight weeks to see your business the way a lender, a prime or a buyer would." | The pilot schedule puts the briefing walk-through in weeks 2 to 3. Eight weeks is the agreement's term. The headline misstates when the owner sees anything. Prohibition 3 (misleading implication) | **Open. Your decision; see "The eight weeks label" below** |
 | 5 | FIX | "Owners at your stage tend to want the same two things…" | A "most owners" line needs a source. Step 3, item 2 | Applied. Now "This pilot is built for an owner who wants two things…" |
@@ -24,7 +24,7 @@ Severity as the playbook defines it. "Applied" means the mock-up now carries the
 | 10 | FIX | Gauge line said "not a grade" | The app's own note reads "not a grade, a valuation or a prediction of a sale" | Applied |
 | 11 | FIX | FREE-REVIEW sat in small print, far from the first "No fee" in the hero | Your decision put it beside the no-fee terms. A disclosure should be easy to find from the claim it qualifies | Applied. Body-size text, and the hero's "No fee" fact links to that section |
 | 12 | FIX | "Most owners finish in about 20 minutes" (Readiness Review) | A "most owners" claim. Step 3, item 2 | Applied on both pages. Now "Plan on about 20 minutes" |
-| 13 | ADD | Nothing on the page said the app uses AI | An owner deciding whether to enter business and household information would want to know. Prohibition 1 (omission). Your brochure draft discloses it | Applied. One sentence in step 3, and a new question, "Does the app use AI?", in the brochure draft's words |
+| 13 | ADD | Nothing on the page said the app uses AI | An owner deciding whether to enter business and household information would want to know. Prohibition 1 (omission) | Applied. One sentence in step 3, and a new question, "Does the app use AI?" **Checked 2026-11-21: the filed brochure says nothing about AI.** The sentence uses the wording of the brochure draft in the app's repository, which was not carried into the filing. So the page rests on what the app does, and you need to confirm that (see "Needs David's call") |
 | 14 | ADD | The limits of the figures were thin | Prohibition 4, fair balance. Missing: figures rest on unaudited owner inputs; results may vary with each use and over time; during the pilot some market figures are test ranges (agreement §7) | Applied. Two lines added under "It is" |
 | 15 | ADD | The headline invites the reading that the briefing is what a lender or buyer would conclude | Prohibition 3. The briefing shows factors they often look at; it does not predict their decisions | Applied. New line under "It is not": a lender's, buyer's or contracting officer's decision |
 | 16 | RECORD | The cybersecurity sentence under the form | It is the SITE-CYBER text from the old firm site. Your disclosure file lists it as found there and not yet in the firm's master file | Open. Approve it into the master file, or replace it |
@@ -102,7 +102,7 @@ An alternative, if you want the timeline visible: a four-point strip (apply; ste
 | Online steps take about [measured time] | Pilot timing page. Until then, the M3 tester times (28, 31, 33 minutes) support "about half an hour" at most |
 | About ten owners | Your decision of 2026-11-20, once logged |
 | Reply within three business days | Your decision of 2026-11-20. A commitment, so keep it |
-| AI summarizes answers and suggests scores; owner confirms; David reviews | Brochure, as filed. I read the draft in the app's repository, not the filed text |
+| AI summarizes answers and suggests scores; owner confirms; David reviews | Not the brochure: the filed text is silent on AI. Evidence is the app itself, your AI Use and Governance Policy (D30, D37) and counsel's opinion of 2026-10-17 |
 | VA benefits: monthly amount and, in some cases, rating percentage; no diagnosis | The app's factor H7 rule in its project guide; confirm against the live screens |
 | The firm can work with only a limited number of owners in some states | D41, D47, D51 |
 | Readiness Review: thirteen questions; about 20 minutes | The Readiness Review app; its completion times |
@@ -110,11 +110,11 @@ An alternative, if you want the timeline visible: a four-point strip (apply; ste
 ## Needs David's call
 
 1. **The eight weeks label** (flag 4). Recommendation above.
-2. **The sample label** (flags 2 and 3). Whether the app should print "Sample" on a sample briefing. Until it does, the full PDF stays unlinked.
+2. ~~The sample label~~ Decided 2026-11-21: the app prints it. Until it does, the full PDF stays unlinked.
 3. **Whether pages 1 and 2 alone satisfy "notes intact and readable."** Each figure on them has its note beside it, but page 2 refers the reader to "About these figures" later in the briefing, which is not shown.
-4. **SITE-CYBER** (flag 16).
-5. **The AI sentence** (flag 13): confirm it matches the brochure as filed.
-6. **The placeholders** (flag 1).
+4. **SITE-CYBER** (flag 16). To clear it: approve the sentence into your firm's master disclosure file, either as written (first person) or in a firm-voice form, and name the written security policy that backs "implements measures."
+5. **The AI sentence** (flag 13). The brochure cannot back it, because the filed brochure is silent on AI. To clear it: confirm three facts about the app as it runs today (a third-party AI summarizes written answers and suggests scores; the owner confirms each score; you review AI-generated content before relying on it in a briefing), and decide whether to ask Comply to add the AI paragraph to the brochure.
+6. **The placeholders** (flag 1). The Terms document you sent on 2026-11-21 is corrected in `TERMS-DRAFT.md`; the Privacy Policy is still needed.
 
 ## Pre-publish checklist
 
@@ -144,4 +144,4 @@ Signed: ______________________  David L. Roberts, CCO      Date: ____________
 
 **Record:** when the page is published, file a copy as published with the date and channel, this review, the substantiation notes, and a note of what you changed from the AI draft, in the advertising file. Retention is five years from the end of the fiscal year of last use.
 
-**Verification note:** Rule and firm facts come from your skill's files as read on 2026-11-20 and 21: the marketing-review playbook, firm profile, decisions log through D60, disclosures, the Marketing Rule rulebook file (dated 2026-10-23) and the insurance rulebook file (dated 2026-10-23). Nothing was re-checked against a primary source. Agreement sections were read in the app's repository (Pilot Planning Agreement r2). The pilot schedule and tester times come from the app's validation kit and project guide. I did not read the filed brochure or the app's Terms of Use and Privacy Policy. The Readiness Review section on this page was reviewed; the home page copy has not had its own pass.
+**Verification note:** Rule and firm facts come from your skill's files as read on 2026-11-20 and 21: the marketing-review playbook, firm profile, decisions log through D60, disclosures, the Marketing Rule rulebook file (dated 2026-10-23) and the insurance rulebook file (dated 2026-10-23). Nothing was re-checked against a primary source. Agreement sections were read in the app's repository (Pilot Planning Agreement r2). The pilot schedule and tester times come from the app's validation kit and project guide. On 2026-11-21 I read the filed brochure (Form ADV Part 2A, version date 11/5/2026, submitted 11/11/2026, from adviserinfo.sec.gov): Items 2, 4, 5 and 10. I did not read the app's Terms of Use and Privacy Policy. The Readiness Review section on this page was reviewed; the home page copy has not had its own pass.

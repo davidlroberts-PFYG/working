@@ -8,6 +8,7 @@ Files in this folder:
 - `FAQ-PAY-ANSWER.md` is the corrected FAQ answer on how the firm is paid, ready to paste after your check.
 - `DECISIONS-TO-RECORD.md` holds draft rows for your decisions log.
 - `PILOT-PAGE-REVIEW.md` is the marketing-review playbook pass on the pilot page copy (2026-11-21), with the checklist for your signature.
+- `TERMS-DRAFT.md` is the Terms document you sent, corrected so it can cover both sites, with points for counsel.
 - `soef-pilot-mockup.html`, `soef-home-mockup.html` and `soef-applied-mockup.html` are the mock-ups, each one self-contained file. Open one in a browser. The bar at the top moves between the three pages and turns the review notes on and off.
 - `previews/` holds pictures of the same pages at desktop and phone width.
 - `mockup/` holds the source: one body file per page, the shared styles, the images, and the sample Value Briefing you sent. `build.py` rebuilds the pages from it.
@@ -273,8 +274,8 @@ None of these is in your decisions log yet. `DECISIONS-TO-RECORD.md` has draft r
 **Needs David's call (still open):**
 
 1. **The outside-manager paragraph in the corrected FAQ answer.** My wording, from your firm profile's summary. Check it against brochure Items 5 and 10.D before it is published.
-2. **SHARP Leadership and the brochure.** Whether Item 10 should mention the family interest in SHARP Leadership. I searched the brochure draft in the app's repository and found no mention of SHARP or C2H; I did not read the filed brochure.
-3. **Which Privacy Policy and Terms the footer links to.** I found no link on the pages I read. The app has its own Privacy Policy and Terms of Use, which cover the app, not the Squarespace form.
+2. **SHARP Leadership and the brochure.** Whether Item 10 should mention the family interest in SHARP Leadership. Checked 2026-11-21: the filed brochure (version date 11/5/2026) mentions neither SHARP Leadership nor C2H.
+3. **Which Privacy Policy and Terms the footer links to.** I found no link on the pages I read. The app has its own Privacy Policy and Terms of Use, which cover the app, not the Squarespace form. You sent the firm's Terms on 2026-11-21; `TERMS-DRAFT.md` corrects it for both sites. The Privacy Policy is still needed.
 4. **The amended WEBSITE block** must be recorded in your claude-skills repo before it is pasted on either site, so both paste from one source.
 
 **Substantiation to file for the new pages**
