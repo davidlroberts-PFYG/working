@@ -25,11 +25,8 @@ Use your next free D-numbers. The last one in the file I read was D60, and the f
 |---|---|---|---|
 | D__ | 2026-11-21 | **A sample Value Briefing used in marketing carries a "Sample" label printed by the app itself, on every page of the PDF** (clarifies D43, condition 2). A label added around the briefing by the page it sits on is not enough on its own, because the PDF or a page image can be opened without it. Until the app prints the label, the full sample PDF is not linked from any page. Suggested: the app allows the label only on a test business with no signed agreement recorded, and refuses it if a DealStats or ProSight figure would print (D50). The app's project guide (rule 12) asks for a row here the day the wording is approved. | D43; D50. The two sample briefings reviewed 2026-11-20 say "TEST" in the company name and nowhere say "sample." |
 
-## Waiting on your answer
-
-| Item | What is needed |
-|---|---|
-| **SITE-CYBER** | The sentence "I take cybersecurity seriously, and I implement measures to protect your information. However, it's important to remain vigilant about potential cyber threats." is listed in `disclosures.md` as found on the old firm site and not in the firm's master file. To use it under the pilot form: approve it as a firm block, as written or in a firm-voice form, and enter the written security policy that backs it in the substantiation log. |
+| D__ | 2026-11-21 | **Cybersecurity sentence approved in firm voice, as a firm block:** "Plan For Your Goals, LLC takes cybersecurity seriously and implements measures to protect your information. It is still important to stay alert to potential cyber threats." It replaces the first-person SITE-CYBER text found on the old firm site, which was never in the firm's master file. Used wherever a firm web page collects personal data, first under the pilot application form. Enter it in `disclosures.md`. | Marketing-review playbook Step 8. On a site with two co-founders "I" is ambiguous; the firm is responsible for the safeguards. **[VERIFY]** the written security policy that backs "implements measures," and enter its name and date in the substantiation log. |
+| D__ | 2026-11-21 | **Pilot marketing states the owner's time as "about two to three hours," spread over eight weeks.** "Eight weeks" is used as the agreement's term, not as a headline or label. | Pilot Planning Agreement r2, §12 (term); validation kit pilot schedule; M3 tester times of 28, 31 and 33 minutes for the online flow. An estimate; check against pilot timing after the first wave. |
 
 ## Suggested new open item
 

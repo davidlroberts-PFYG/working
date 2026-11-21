@@ -355,7 +355,7 @@ The compliance calls are in section 9.3.
 - The original photo of you and Teresa without the badge, for the real build. The home mock-up uses the current photo with the badge masked by a navy fade at the same size; that masked copy is for the mock-up only.
 - The sample briefing: it says "TEST" in the company name but nowhere says "sample," and D43 asks for a sample label. The mock-ups add the label around the image. Decide whether that is enough or the app should print it.
 - Page 5 of both sample PDFs has words broken across lines ("owner's vi ew," "estate de cision"), and page 7 ends with a heading whose text starts on page 8. Fix in the app before the full PDF is posted.
-- The measured time for the online steps. The app's target is under 35 minutes; the pages leave a blank.
+- ~~The measured time for the online steps.~~ Settled 2026-11-21: the pages state the owner's total time, "about two to three hours" over eight weeks, and give no separate figure for the online steps.
 - The firm-page button (section 12, item 7).
 
 ## 14. Order of work

@@ -4,7 +4,7 @@ Reviewed 2026-11-21 with the florida-ria-cco marketing-review playbook. Piece: t
 
 **Tier:** 2. A public web page that offers an advisory service (the no-fee pilot under the Pilot Planning Agreement). It also shows a sample Value Briefing, which takes the playbook's Business Value First checks in Step 7.
 
-**Result:** not ready to publish. Two blocking items, both outside the copy itself. Eight wording fixes and three additions, all applied to the mock-up except the "eight weeks" headline, which is waiting on your decision. No promissory language, no performance, no testimonial, and no "free" or "no obligation" was found.
+**Result:** not ready to publish. Two blocking items, both outside the copy itself. Eight wording fixes and three additions, all now applied to the mock-up, including your decisions of 2026-11-21 on the "eight weeks" label and the cybersecurity sentence. No promissory language, no performance, no testimonial, and no "free" or "no obligation" was found.
 
 ## Compliance flags
 
@@ -12,10 +12,10 @@ Severity as the playbook defines it. "Applied" means the mock-up now carries the
 
 | # | Severity | What | Why | Status |
 |---|---|---|---|---|
-| 1 | **BLOCK** | Five placeholders: Privacy Policy link, Terms link, the measured time for the online steps (two places), the firm email inside the footer block, the YouTube link | The form collects personal data, so the Privacy Policy link must be real. A page cannot go live with blanks. Step 8 (WEBSITE, WARRANTIES) | Open. Yours to supply |
+| 1 | **BLOCK** | Four placeholders: Privacy Policy link, Terms link, the firm email inside the footer block, the YouTube link. (The measured-time blank is gone: the page now states the owner's total time once) | The form collects personal data, so the Privacy Policy link must be real. A page cannot go live with blanks. Step 8 (WEBSITE, WARRANTIES) | Open. Yours to supply |
 | 2 | **BLOCK** | The link to the full 15-page sample PDF | Opened on its own, the PDF nowhere says "sample"; it says "TEST" in the company name only. D43 condition 2. Page 5 also has words broken across lines | Link removed from both pages. **Decided 2026-11-21: the app will print a sample label.** The link returns when it does and the defect is fixed |
 | 3 | FIX | Sample page images opened full size lose the "SAMPLE" label, which sat in the page around them | D43 condition 2: the label has to travel with the sample | Applied. A navy "SAMPLE" strip is now part of each image file, added above the page. The briefing page itself is unedited |
-| 4 | FIX | Headline: "Eight weeks to see your business the way a lender, a prime or a buyer would." | The pilot schedule puts the briefing walk-through in weeks 2 to 3. Eight weeks is the agreement's term. The headline misstates when the owner sees anything. Prohibition 3 (misleading implication) | **Open. Your decision; see "The eight weeks label" below** |
+| 4 | FIX | Headline: "Eight weeks to see your business the way a lender, a prime or a buyer would." | The pilot schedule puts the briefing walk-through in weeks 2 to 3. Eight weeks is the agreement's term. The headline misstates when the owner sees anything. Prohibition 3 (misleading implication) | Applied. Decided 2026-11-21: the headline matches the home page, and the hero fact reads "About two to three hours" |
 | 5 | FIX | "Owners at your stage tend to want the same two things…" | A "most owners" line needs a source. Step 3, item 2 | Applied. Now "This pilot is built for an owner who wants two things…" |
 | 6 | FIX | "…he works with veteran business owners online, wherever they are." | Contradicts the state limits stated beside the form. Prohibition 1 | Applied. Now "…he meets with owners online." |
 | 7 | FIX | Insurance paragraph ended at "never required to buy any product through him" | Agreement §5 and your INSURANCE-CONFLICT block both add that the owner may buy elsewhere | Applied. Added "and you may buy any product you choose elsewhere" |
@@ -27,7 +27,7 @@ Severity as the playbook defines it. "Applied" means the mock-up now carries the
 | 13 | ADD | Nothing on the page said the app uses AI | An owner deciding whether to enter business and household information would want to know. Prohibition 1 (omission) | Applied. One sentence in step 3, and a new question, "Does the app use AI?" **Checked 2026-11-21: the filed brochure says nothing about AI.** The sentence uses the wording of the brochure draft in the app's repository, which was not carried into the filing. So the page rests on what the app does, and you need to confirm that (see "Needs David's call") |
 | 14 | ADD | The limits of the figures were thin | Prohibition 4, fair balance. Missing: figures rest on unaudited owner inputs; results may vary with each use and over time; during the pilot some market figures are test ranges (agreement §7) | Applied. Two lines added under "It is" |
 | 15 | ADD | The headline invites the reading that the briefing is what a lender or buyer would conclude | Prohibition 3. The briefing shows factors they often look at; it does not predict their decisions | Applied. New line under "It is not": a lender's, buyer's or contracting officer's decision |
-| 16 | RECORD | The cybersecurity sentence under the form | It is the SITE-CYBER text from the old firm site. Your disclosure file lists it as found there and not yet in the firm's master file | Open. Approve it into the master file, or replace it |
+| 16 | RECORD | The cybersecurity sentence under the form | The SITE-CYBER text on the old firm site was first person and was never in the firm's master file | Applied. You approved firm-voice wording on 2026-11-21: "Plan For Your Goals, LLC takes cybersecurity seriously and implements measures to protect your information. It is still important to stay alert to potential cyber threats." Still to do: enter it in your disclosure file, and name the written security policy behind it |
 | 17 | RECORD | Substantiation and the review record | Step 9 | See below |
 
 ## Checked and clean
@@ -46,38 +46,24 @@ Severity as the playbook defines it. "Applied" means the mock-up now carries the
 
 ## The eight weeks label
 
-Three places use it as a selling point: the headline, the "Eight weeks" fact under the hero, and the home page's gold band ("what the eight weeks are for"). A fourth, in "Who the pilot is for," asks for "a few sittings over eight weeks."
+**Decided by you on 2026-11-21: "eight weeks" is a term, not a label, and the page leads with "about two to three hours" of the owner's time.**
 
-What the eight weeks actually are, from your own documents:
+Why: eight weeks is the agreement's term, and most of it is your follow-up window. By your pilot schedule the owner's steps fall in week 1, the walk-through in weeks 2 to 3, the exit interview in weeks 3 to 4, and a short check-in in weeks 6 to 8. As a label, "eight weeks" made the pilot sound like an eight-week program, and in the headline it misstated when the owner sees the briefing.
 
-| When | What happens | Owner's time |
+What changed:
+
+| Where | Was | Now |
 |---|---|---|
-| Week 0 | Invitation, agreement, account | |
-| Week 1 | Readiness Review and Quick Facts | Target under 35 minutes for the whole online flow; your three internal testers took 28, 31 and 33 |
-| Weeks 1 to 2 | Owner reviews the suggested scores | Included above |
-| Weeks 2 to 3 | Value Briefing walk-through | About 45 minutes |
-| Weeks 3 to 4 | Exit interview | About 20 minutes |
-| Weeks 6 to 8 | Short check-in | Short |
+| Pilot headline | "Eight weeks to see your business the way a lender, a prime or a buyer would." | "See your business the way a lender, a prime or a buyer would." |
+| Hero fact | "Eight weeks" | "About two to three hours. Your time in all, spread over eight weeks…" |
+| Who it is for | "a few sittings over eight weeks" | "about two to three hours over eight weeks" |
+| Time question | A blank for the online steps | "About two to three hours in all, spread over eight weeks…" |
+| Home gold band | "…what the eight weeks are for." | "…what the pilot is for." |
+| Home, how it works | "eight weeks each" | "About two to three hours of your time, over eight weeks." |
 
-So eight weeks is the agreement's term, and most of it is your follow-up window. The owner's part is roughly two hours, and the briefing arrives in the first three weeks.
+"Eight weeks" stays where it is a fact the owner needs: "How the pilot works," the question about the end of the pilot, the "application received" page, and the agreement.
 
-As a label, "eight weeks" works against you three ways:
-
-1. It sounds like an eight-week program. The real ask is about two hours.
-2. It hides the best part of the timeline. The owner sees the briefing in weeks 2 to 3, not week 8.
-3. In the headline it is inaccurate about timing (flag 4).
-
-My recommendation: stop using it as a label and keep it as a term.
-
-- **Headline:** the same one as the home page, "See your business the way a lender, a prime or a buyer would." Most pilot-page visitors arrive from YouTube and never see the home page, so the repetition costs little.
-- **Hero fact:** replace "Eight weeks" with "About two hours of your time," with the line "Online steps, a 45-minute walk-through and a short interview, spread over eight weeks."
-- **Gold band on the home page:** "Finding them is what the pilot is for."
-- **Who it is for:** "You can give it about two hours over eight weeks…"
-- **Where "eight weeks" stays:** in "How the pilot works," in the question about what happens when the pilot ends, and in the agreement. It is a fact the owner needs; it is not the pitch.
-
-One caution on "about two hours": it is my arithmetic from your schedule and your internal testers' times, not a measurement of real owners. It needs a substantiation note now and a check against your pilot timing page after the first wave.
-
-An alternative, if you want the timeline visible: a four-point strip (apply; steps in week 1; briefing in weeks 2 to 3; check-in by week 8). It is more informative, but it turns a plan into something close to a promise about your turnaround.
+"About two to three hours" is your figure. My own sum from the schedule came to roughly two hours, so the range leaves room. It is an estimate, not a measurement of real owners; check it against your pilot timing page after the first wave.
 
 ## Disclosure blocks on the page
 
@@ -99,7 +85,8 @@ An alternative, if you want the timeline visible: a four-point strip (apply; ste
 | "Buyers, lenders and contracting officers" often look at customer relationships, written processes, profit and certifications | The method spec's factor list and the sources behind each factor |
 | No fee; nothing to buy; free to decline | Pilot Planning Agreement r2, §4 |
 | Eight-week term; walk-through of about 45 minutes; shorter follow-up; feedback interview | Agreement §3, §10, §12; validation kit pilot schedule |
-| Online steps take about [measured time] | Pilot timing page. Until then, the M3 tester times (28, 31, 33 minutes) support "about half an hour" at most |
+| "About two to three hours" of the owner's time, over eight weeks | Your figure of 2026-11-21. Support on file: the validation kit's pilot schedule (online flow under 35 minutes as a target; 45-minute walk-through; 20-minute exit interview; short check-in) and the M3 tester times (28, 31, 33 minutes). Check it against the pilot timing page after the first wave |
+| The firm "implements measures to protect your information" | The firm's written information security policy: name and date to be entered |
 | About ten owners | Your decision of 2026-11-20, once logged |
 | Reply within three business days | Your decision of 2026-11-20. A commitment, so keep it |
 | AI summarizes answers and suggests scores; owner confirms; David reviews | Not the brochure: the filed text is silent on AI. Evidence is the app itself, your AI Use and Governance Policy (D30, D37) and counsel's opinion of 2026-10-17 |
@@ -109,10 +96,10 @@ An alternative, if you want the timeline visible: a four-point strip (apply; ste
 
 ## Needs David's call
 
-1. **The eight weeks label** (flag 4). Recommendation above.
+1. ~~The eight weeks label~~ Decided 2026-11-21.
 2. ~~The sample label~~ Decided 2026-11-21: the app prints it. Until it does, the full PDF stays unlinked.
 3. **Whether pages 1 and 2 alone satisfy "notes intact and readable."** Each figure on them has its note beside it, but page 2 refers the reader to "About these figures" later in the briefing, which is not shown.
-4. **SITE-CYBER** (flag 16). To clear it: approve the sentence into your firm's master disclosure file, either as written (first person) or in a firm-voice form, and name the written security policy that backs "implements measures."
+4. **The cybersecurity sentence** (flag 16). Wording decided 2026-11-21. Still needed: the name and date of the written security policy that backs "implements measures."
 5. **The AI sentence** (flag 13). The brochure cannot back it, because the filed brochure is silent on AI. To clear it: confirm three facts about the app as it runs today (a third-party AI summarizes written answers and suggests scores; the owner confirms each score; you review AI-generated content before relying on it in a briefing), and decide whether to ask Comply to add the AI paragraph to the brochure.
 6. **The placeholders** (flag 1). The Terms document you sent on 2026-11-21 is corrected in `TERMS-DRAFT.md`; the Privacy Policy is still needed.
 
@@ -128,13 +115,13 @@ Run by the skill on the mock-up copy of 2026-11-21. Sign when the open items are
 [x] No guarantee / promise / outcome language
 [x] No performance or client results; no illustration outside the app's own sample
 [x] No testimonial, endorsement, review or rating
-[ ] Every statistic or factual claim has a substantiation note (table above; measured time outstanding)
+[ ] Every statistic or factual claim has a substantiation note (table above; security policy name outstanding)
 [x] "No fee" carries FREE-REVIEW (D48 and decision of 2026-11-20); no urgency beyond the real seat count
 [x] Education content says it is general; SOEF block present
 [x] Tax/legal: CPA and attorney language present; no tax result stated
 [x] Veteran market: no implied government affiliation
 [x] Insurance: Ch. 626 checks passed (capacities stated, standard line present, no product promoted)
-[ ] Required disclosure blocks present, pasted verbatim (WARRANTIES link and firm email outstanding; SITE-CYBER not in master file)
+[ ] Required disclosure blocks present, pasted verbatim (WARRANTIES link and firm email outstanding; cybersecurity sentence to be entered in the master file)
 [ ] Business Value First sample: notes intact; no firm blocks added; no CEPA® tie; D43 and D50 met (sample label on the PDF outstanding)
 [x] AI involvement noted on the record: this copy and this review were drafted with an AI tool
 [ ] Copy, date, channel, substantiation and this checklist saved to the advertising file
