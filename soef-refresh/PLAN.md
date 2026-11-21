@@ -7,6 +7,7 @@ Files in this folder:
 - `PLAN.md` is this plan.
 - `FAQ-PAY-ANSWER.md` is the corrected FAQ answer on how the firm is paid, ready to paste after your check.
 - `DECISIONS-TO-RECORD.md` holds draft rows for your decisions log.
+- `PILOT-PAGE-REVIEW.md` is the marketing-review playbook pass on the pilot page copy (2026-11-21), with the checklist for your signature.
 - `soef-pilot-mockup.html`, `soef-home-mockup.html` and `soef-applied-mockup.html` are the mock-ups, each one self-contained file. Open one in a browser. The bar at the top moves between the three pages and turns the review notes on and off.
 - `previews/` holds pictures of the same pages at desktop and phone width.
 - `mockup/` holds the source: one body file per page, the shared styles, the images, and the sample Value Briefing you sent. `build.py` rebuilds the pages from it.
@@ -367,7 +368,7 @@ The compliance calls are in section 9.3.
 
 **Phase 1: ready for YouTube.**
 
-5. Pilot page copy, in the client-facing SOEF voice, then the full playbook on it.
+5. Pilot page copy, in the client-facing SOEF voice, then the full playbook on it. Done 2026-11-21 (`PILOT-PAGE-REVIEW.md`): two blocking items and the "eight weeks" label are open. The home page copy still needs its own pass.
 6. Build the pilot page, the form with its Google Sheet, and the "application received" page. Set up the `/value` forward. Test the form end to end.
 7. Write the reply for owners who are not invited.
 8. Add the header button and the Business Value First link to the navigation.

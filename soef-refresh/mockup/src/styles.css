@@ -151,6 +151,7 @@ h3 { font-size: 1.3rem; }
 .blocktext { font-size: .84rem; line-height: 1.5; margin-top: 34px; padding-top: 20px; border-top: 1px solid var(--line-on-cream); max-width: 86ch; }
 .on-navy .blocktext { border-top-color: var(--line-on-navy); }
 .blocktext p { margin-bottom: .7em; }
+.blocktext--body { font-size: 1rem; line-height: 1.55; }
 
 /* People */
 .person { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: start; }
