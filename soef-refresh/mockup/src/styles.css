@@ -88,9 +88,25 @@ h3 { font-size: 1.3rem; }
 .facts-row li + li { padding-left: 28px; border-left: 1px solid var(--line-on-navy); }
 .facts-row b { display: block; font: 500 1.05rem/1.35 var(--head); margin-bottom: 4px; }
 
+/* Split hero (home): headline left, photo right */
+.hero--split { text-align: left; padding: 64px 0 72px; }
+.hero-split { display: grid; grid-template-columns: 1.08fr .92fr; gap: 60px; align-items: center; }
+.hero--split h1 { max-width: 15ch; margin: 0 0 24px; font-size: clamp(2.05rem, 4vw, 3.1rem); }
+.hero--split .lead { max-width: 36ch; margin: 0 0 32px; }
+.hero-photo { margin: 0; position: relative; }
+.hero-photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.hero-photo figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 22px 20px; font-size: .9rem; line-height: 1.4; }
+.hero-photo figcaption b { display: block; font: 500 1.02rem/1.35 var(--head); margin-bottom: 2px; }
+
+/* Stakes: three questions */
+.stakes { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
+.stakes li { border-top: 4px solid var(--orange); padding-top: 22px; }
+.stakes h3 { font-size: 1.5rem; color: var(--navy); margin-bottom: 14px; }
+.stakes p { font-size: 1.04rem; }
+
 /* Gold call-to-action band */
 .band { padding: 52px 0; text-align: center; }
-.band .lead { max-width: 30ch; margin: 0 auto 24px; }
+.band .lead { max-width: 34ch; margin: 0 auto 24px; }
 
 /* Two columns */
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
@@ -206,6 +222,11 @@ a[href^="tel:"] { white-space: nowrap; }
   section { padding: 60px 0; }
   .hero { padding-top: 52px; }
   .two, .two.wide-left, .apply-grid, .people { grid-template-columns: 1fr; gap: 40px; }
+  .hero-split { grid-template-columns: 1fr; gap: 40px; }
+  .hero--split { padding: 48px 0 56px; }
+  .hero--split h1, .hero--split .lead { max-width: none; }
+  .hero-photo { max-width: 520px; }
+  .stakes { grid-template-columns: 1fr; gap: 30px; }
   .steps, .steps.three, .inside { grid-template-columns: 1fr 1fr; }
   .tracks { grid-template-columns: 1fr; }
   .foot-grid { grid-template-columns: 1fr; gap: 34px; }

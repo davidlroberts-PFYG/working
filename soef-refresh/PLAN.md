@@ -24,6 +24,9 @@ Your answers on 2026-11-20.
 | Build | Rework on Squarespace |
 | Video on the site | A few key videos only. The channel holds the library |
 | Output of this session | This written plan |
+| Home page headline (2026-11-21) | New: "See your business the way a lender, a prime or a buyer would." The offer changed, so the headline changes |
+| Hero photo (2026-11-21) | The photo of you and Teresa stays in the hero. The "Veteran Owned Business" badge comes off it |
+| Stakes section (2026-11-21) | Redesigned around the app's three gauge questions |
 
 A naming note. Your app uses "Door 1" for the free public tier (switched off today) and "Door 2" for advice under a signed agreement. This plan says "primary on-ramp" and "second on-ramp" for the two ways into the site, so the terms are not confused.
 
@@ -143,8 +146,8 @@ Shorter than today. The long program material moves to the Program page so nothi
 | # | Section | What it says | Source |
 |---|---|---|---|
 | Header | Logo, five links, APPLY FOR THE PILOT | | Changed |
-| 1 | Hero | Keep the current question to Sarah. Draft line under it: "Business Value First helps you see your company the way a buyer might: the drivers buyers typically price, and where yours still depend on you." Button to the pilot page | Headline kept, subhead new |
-| 2 | Does this sound like you | The existing pain points. The buyer line is reworded to "the drivers buyers typically price" | Mostly kept |
+| 1 | Hero | Headline: "See your business the way a lender, a prime or a buyer would." Draft line under it: "Much of what they look at comes down to one thing: how much of the company still rests on you. Business Value First shows you where, and where to start." Button to the pilot page. The photo of you and Teresa beside it, without the badge, captioned with both names and "Co-founders of Secure On Every Front" | New |
+| 2 | The stakes | "Three questions sit under everything they look at": What would a buyer pay for? Could it run without you? Is your family secure without the sale? These are the app's gauge headings, word for word. One or two plain lines under each. A gold band closes it: "You don't need the answers to apply. Finding them is what the eight weeks are for." Replaces "Does any of this sound like where you are right now?" | New |
 | 3 | What Business Value First is | Three sentences, a sample Value Briefing page, and the explainer video. Names Plan For Your Goals, LLC. Button | New |
 | 4 | How the pilot works | The four steps from the pilot page, shortened to three lines. Replaces "Three Steps To Find Your Starting Point" | New |
 | 5 | What you do next is your call | The three tracks by name, one line each, in your standing order: household, then team, then exit. Link to the Program page. States that the pilot does not require any of them | Condensed from today's track sections |
@@ -175,7 +178,7 @@ Written with your billion-dollar brain trust's operating context in mind (the va
 - **Applying, not signing up, fits what you have filed.** Your brochure describes Business Value Planning as offered "only as a no-fee pilot to owners the firm invites." An application followed by your invitation is that sentence in practice. A self-serve sign-up would not be, and would need the brochure to change first.
 - **Ten seats matches the app's own pilot plan.** That plan sets the pilot at 8 to 12 owners, invited in waves of 3 to 5, one owner at a time. The site states one number; you still invite in waves.
 - **The application is also your state-count control.** Pilot owners sign an advisory agreement, so each one counts as a client in their state (D41). Outside Florida and Louisiana you hold to fewer than six clients per state in any twelve months (D47, D51), and Texas stood at four on 2026-11-14. YouTube reaches every state. Asking for state of residence on the form lets you check the count before you invite, which is where your onboarding procedure already puts that check (D52).
-- **Sarah stays the lead, so the existing audience carries over.** The current hero already speaks to her. The change is what the page offers her next.
+- **Sarah stays the lead, with a new headline.** The old headline sold relief from a feeling. The new one sells an outside view of the company, and names lenders and primes first, people she deals with while growing, so "value" does not read as an exit question. It follows the app's own tagline. The pilot page headline is aligned with it.
 - **The program is not hidden; it is sequenced.** Leading with the three tracks asks a stranger to understand your whole method before taking one step. Leading with the app gives her one concrete thing, and the tracks become the answer to "what would I do about it."
 - **Two on-ramps without two competing buttons.** The pilot gets the buttons. The Readiness Review gets a sentence and a quieter link. One primary action per page holds.
 - **Less to maintain.** One explainer video, used twice. The channel carries the library.
@@ -254,7 +257,7 @@ Pasted from your disclosure file, word for word, by whoever builds the page. Non
 | FREE-REVIEW on the pilot page | Yes, as written, beside the "no fee" terms. One rule for the deck (D48) and the page |
 | QUESTIONNAIRE on the application form | No. The form screens fit and no recommendation is based on it; intake happens in the app, which carries its own notes |
 | Footer disclosure on SOEF | The same amended WEBSITE block as planforyourgoals.com |
-| "Veteran Owned Business" badge and page title (O7) | Ownership not confirmed. Remove the badge and reword the title. The claim can return when documented. O7 stays open |
+| "Veteran Owned Business" badge and page title (O7) | Remove the badge and reword the title. You clarified on 2026-11-21 that the badge was always for Teresa's company, SHARP Leadership LLC, and was never a claim about the firm. It still comes off this site, because here a visitor reads it as describing the program or the firm. Suggested: close O7 as "not claimed" |
 | Unsourced claims (item 9 in section 9.1, and the "more fluent than a generalist advisor" line) | Reword all of them |
 | Teresa's years of service | Drop the number |
 | C2H and SHARP Leadership | Your statement of fact: neither pays the firm for referrals; SHARP Leadership is Teresa's company. The site says so wherever SHARP is named |
@@ -347,7 +350,7 @@ The compliance calls are in section 9.3.
 
 - The four open calls in section 9.3.
 - Whether Squarespace's form storage can write to a Google Sheet directly. I believe it can; confirm in the form's storage settings.
-- A copy of the photo of you and Teresa without the badge. The mock-ups use the two separate portraits already on your site.
+- The original photo of you and Teresa without the badge, for the real build. The home mock-up uses the current photo with the badge masked by a navy fade at the same size; that masked copy is for the mock-up only.
 - The sample briefing: it says "TEST" in the company name but nowhere says "sample," and D43 asks for a sample label. The mock-ups add the label around the image. Decide whether that is enough or the app should print it.
 - Page 5 of both sample PDFs has words broken across lines ("owner's vi ew," "estate de cision"), and page 7 ends with a heading whose text starts on page 8. Fix in the app before the full PDF is posted.
 - The measured time for the online steps. The app's target is under 35 minutes; the pages leave a blank.

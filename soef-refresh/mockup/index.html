@@ -100,9 +100,25 @@ h3 { font-size: 1.3rem; }
 .facts-row li + li { padding-left: 28px; border-left: 1px solid var(--line-on-navy); }
 .facts-row b { display: block; font: 500 1.05rem/1.35 var(--head); margin-bottom: 4px; }
 
+/* Split hero (home): headline left, photo right */
+.hero--split { text-align: left; padding: 64px 0 72px; }
+.hero-split { display: grid; grid-template-columns: 1.08fr .92fr; gap: 60px; align-items: center; }
+.hero--split h1 { max-width: 15ch; margin: 0 0 24px; font-size: clamp(2.05rem, 4vw, 3.1rem); }
+.hero--split .lead { max-width: 36ch; margin: 0 0 32px; }
+.hero-photo { margin: 0; position: relative; }
+.hero-photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.hero-photo figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 22px 20px; font-size: .9rem; line-height: 1.4; }
+.hero-photo figcaption b { display: block; font: 500 1.02rem/1.35 var(--head); margin-bottom: 2px; }
+
+/* Stakes: three questions */
+.stakes { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
+.stakes li { border-top: 4px solid var(--orange); padding-top: 22px; }
+.stakes h3 { font-size: 1.5rem; color: var(--navy); margin-bottom: 14px; }
+.stakes p { font-size: 1.04rem; }
+
 /* Gold call-to-action band */
 .band { padding: 52px 0; text-align: center; }
-.band .lead { max-width: 30ch; margin: 0 auto 24px; }
+.band .lead { max-width: 34ch; margin: 0 auto 24px; }
 
 /* Two columns */
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
@@ -218,6 +234,11 @@ a[href^="tel:"] { white-space: nowrap; }
   section { padding: 60px 0; }
   .hero { padding-top: 52px; }
   .two, .two.wide-left, .apply-grid, .people { grid-template-columns: 1fr; gap: 40px; }
+  .hero-split { grid-template-columns: 1fr; gap: 40px; }
+  .hero--split { padding: 48px 0 56px; }
+  .hero--split h1, .hero--split .lead { max-width: none; }
+  .hero-photo { max-width: 520px; }
+  .stakes { grid-template-columns: 1fr; gap: 30px; }
   .steps, .steps.three, .inside { grid-template-columns: 1fr 1fr; }
   .tracks { grid-template-columns: 1fr; }
   .foot-grid { grid-template-columns: 1fr; gap: 34px; }
@@ -272,36 +293,44 @@ a[href^="tel:"] { white-space: nowrap; }
 <main id="top">
 
 <!-- ============ 1. HERO ============ -->
-<section class="hero on-navy rule-bottom">
-  <div class="wrap">
-    <div class="hero-pad">
-      <h1>Still wearing every hat in the business &mdash; even after all this growth?</h1>
-      <p class="lead">Business Value First helps you see your company the way a buyer or lender might: the factors they often look at, and where yours still depend on you.</p>
-      <p class="cta-sub">A pilot for veteran business owners, by Plan For Your Goals, LLC.</p>
-      <p class="note mid"><b>Review note 1.</b> The headline is your current one, unchanged, so the audience you already have recognizes the page. The line under it is new and is a draft. It replaces &ldquo;Secure On Every Front is a planning program&hellip;&rdquo; as the first thing a visitor reads: app first, program second.</p>
+<section class="hero hero--split on-navy rule-bottom">
+  <div class="wrap hero-split">
+    <div>
+      <p class="eyebrow">Business Value First &middot; for veteran business owners</p>
+      <h1>See your business the way a lender, a prime or a buyer would.</h1>
+      <p class="lead">Much of what they look at comes down to one thing: how much of the company still rests on you. Business Value First shows you where, and where to start.</p>
+      <a class="btn" href="business-value-first.html">See how the pilot works</a>
+      <p class="cta-sub">A pilot by Plan For Your Goals, LLC. An estimate for planning, not an appraisal or a valuation.</p>
+      <p class="note"><b>Review note 1.</b> New headline, direction A, chosen by you on 2026-11-21. It replaces &ldquo;Still wearing every hat&hellip;&rdquo; because the offer changed from a planning program to an outside view of the company. It leads with lenders and primes, people Sarah deals with now, so &ldquo;value&rdquo; does not read as an exit question. The second line is a draft and makes a claim (&ldquo;much of what they look at comes down to one thing&rdquo;); it needs to hold up in the playbook pass. The wording follows the app&rsquo;s own tagline: &ldquo;What lenders, contracting officers, primes and buyers look at.&rdquo;</p>
     </div>
+    <figure class="hero-photo">
+      <img src="assets/david-teresa.jpg" alt="David Roberts and Teresa Roberts" width="1100" height="1100">
+      <figcaption><b>David Roberts, CEPA&reg;, and Teresa Roberts, Col (Ret.) USAF</b>Co-founders of Secure On Every Front</figcaption>
+      <p class="note"><b>Review note 2.</b> Your photo is back in the hero, by your choice, so there is a face beside the offer. For this mock-up the &ldquo;Veteran Owned Business&rdquo; badge is masked with a navy fade at the bottom of the same-size image, and the caption sits on that fade. The badge described SHARP Leadership, but on this page a visitor would read it as describing this program or the firm. For the real build, use the original photo without the badge; do not use this masked copy. Teresa&rsquo;s service is carried by &ldquo;Col (Ret.) USAF&rdquo; in the caption. The pilot page stays David only (D46).</p>
+    </figure>
   </div>
 </section>
 
-<section class="band on-gold rule-bottom">
+<!-- ============ 2. THE STAKES: THREE QUESTIONS ============ -->
+<section id="questions">
   <div class="wrap">
-    <p class="lead">See what your business may be worth, and what is holding that back.</p>
-    <a class="btn" href="business-value-first.html">See how the pilot works</a>
-    <p class="note mid"><b>Review note 2.</b> The gold band keeps its place from the live page; only the offer changes. Home page buttons say &ldquo;See how the pilot works&rdquo; and go to the top of the pilot page. The header button says &ldquo;Apply for the pilot&rdquo; and goes to the form. That also takes &ldquo;FREE&rdquo; out of the header on every page.</p>
-  </div>
-</section>
-
-<!-- ============ 2. DOES THIS SOUND LIKE YOU ============ -->
-<section>
-  <div class="wrap">
-    <div class="sec-head center" style="text-align:center"><h2>Does any of this sound like where you are right now?</h2></div>
-    <ul class="pains">
-      <li>The business depends too much on you.</li>
-      <li>Your best people may walk if a better offer shows up, and replacing them costs you months you don&rsquo;t have.</li>
-      <li>How much rests on the owner is one of the things buyers and lenders look at closely.</li>
-      <li>Much of your retirement rests on selling the business one day.</li>
+    <div class="sec-head center" style="text-align:center">
+      <h2>Three questions sit under everything they look at.</h2>
+    </div>
+    <ul class="stakes">
+      <li><h3>What would a buyer pay for?</h3><p>Profit that holds up after someone is paid to do your job. Customers and contracts that stay when you step back.</p></li>
+      <li><h3>Could it run without you?</h3><p>Who holds the customer relationships. What is written down. What happens to your certifications if your role changes.</p></li>
+      <li><h3>Is your family secure without the sale?</h3><p>How much of your household&rsquo;s income and retirement rests on the company, and what you would have if you couldn&rsquo;t work.</p></li>
     </ul>
-    <p class="note mid"><b>Review note 3.</b> Two of the four lines are reworded, by your decision of 2026-11-20 to reword unsourced claims. The live page says a buyer &ldquo;would likely value this business at a fraction of what it&rsquo;s actually worth&rdquo; and that retirement &ldquo;depends on a sale that could be discounted.&rdquo; Both predicted a price. The new lines describe the situation without predicting one.</p>
+    <p class="note mid"><b>Review note 3.</b> This replaces &ldquo;Does any of this sound like where you are right now?&rdquo; The three questions are the app&rsquo;s own gauge headings, word for word (Buyer&rsquo;s View, Transfer Readiness, Household Readiness), so the site, the app and the briefing use the same words. Each line under a question describes a situation and predicts nothing: no discounted sale, no lost contract. The lines draw on factors named in the sample briefing (recast profit, customer contacts, written playbooks, certifications, income from outside the business). The two unsourced lines on the live page are gone with the old section.</p>
+  </div>
+</section>
+
+<section class="band on-gold rule-top rule-bottom">
+  <div class="wrap">
+    <p class="lead">You don&rsquo;t need the answers to apply. Finding them is what the eight weeks are for.</p>
+    <a class="btn" href="business-value-first.html">See how the pilot works</a>
+    <p class="note mid"><b>Review note 4.</b> The gold band keeps its look from the live page and now closes the stakes section. Home page buttons say &ldquo;See how the pilot works&rdquo; and go to the top of the pilot page; the header button says &ldquo;Apply for the pilot&rdquo; and goes to the form. That also takes &ldquo;FREE&rdquo; out of the header on every page.</p>
   </div>
 </section>
 
@@ -318,9 +347,10 @@ a[href^="tel:"] { white-space: nowrap; }
       </div>
       <div>
         <ul class="ticks">
-          <li><b>Buyer&rsquo;s View.</b> What would a buyer pay for?</li>
-          <li><b>Transfer Readiness.</b> Could it run without you?</li>
-          <li><b>Household Readiness.</b> Is your family secure without the sale?</li>
+          <li>Where the business depends on you today</li>
+          <li>An estimated value range, and what moves it</li>
+          <li>Top three findings, each with a first step</li>
+          <li>Questions to take to your CPA and attorney</li>
         </ul>
         <p style="margin-top:26px"><a class="btn" href="business-value-first.html">See how the pilot works</a></p>
       </div>
@@ -333,7 +363,7 @@ a[href^="tel:"] { white-space: nowrap; }
       <a class="sample-page" href="assets/sample-page-1.png" target="_blank" rel="noopener" style="display:block"><img src="assets/sample-page-1.png" alt="Sample Value Briefing, page 1 of 15: an at-a-glance page for an invented company, showing the owner's goal for the next 12 months, three gauges with their scores, the top three findings and a first 90-day move. A note under the gauges reads: share of possible points in each view, not a grade, a valuation or a prediction of a sale." width="935" height="1210"></a>
       <figcaption>Sample only. The business, the owner and every figure were invented for illustration. <a class="textlink" href="business-value-first.html#sample">See more of the sample</a>, or <a class="textlink" href="assets/sample-value-briefing.pdf" target="_blank" rel="noopener">read the full 15-page sample (PDF)</a>, which carries all of its notes.</figcaption>
     </figure>
-    <p class="note mid"><b>Review note 4.</b> The three gauge names and their questions are the app&rsquo;s own labels, copied from the briefing. The sample page is shown whole and unedited (D43, D50). The home page shows page 1 only; the pilot page shows two pages and links the full PDF. The same three open points apply as on the pilot page: the &ldquo;sample&rdquo; label, the broken words on page 5 of the PDF, and readability on a phone.</p>
+    <p class="note mid"><b>Review note 5.</b> The sample page is shown whole and unedited (D43, D50). The home page shows page 1 only; the pilot page shows two pages and links the full PDF. The same three open points apply as on the pilot page: the &ldquo;sample&rdquo; label, the broken words on page 5 of the PDF, and readability on a phone.</p>
   </div>
 </section>
 
@@ -353,7 +383,7 @@ a[href^="tel:"] { white-space: nowrap; }
     <div class="blocktext">
       <p>Although the firm does not charge a fee for attending the appointment and this appointment offers the attendees educational information, the appointment is intended to result in the attendee purchasing a product or establishing an advisory relationship.</p>
     </div>
-    <p class="note"><b>Review note 5.</b> This replaces &ldquo;Three Steps To Find Your Starting Point.&rdquo; Because the section says there is no fee, your FREE-REVIEW block sits under it, word for word. If you would sooner keep that block off the home page, the alternative is to remove the &ldquo;no fee&rdquo; sentence here and let the pilot page carry it.</p>
+    <p class="note"><b>Review note 6.</b> This replaces &ldquo;Three Steps To Find Your Starting Point.&rdquo; Because the section says there is no fee, your FREE-REVIEW block sits under it, word for word. If you would sooner keep that block off the home page, the alternative is to remove the &ldquo;no fee&rdquo; sentence here and let the pilot page carry it.</p>
   </div>
 </section>
 
@@ -370,7 +400,7 @@ a[href^="tel:"] { white-space: nowrap; }
       <li><img src="assets/t3.png" alt="" width="360" height="540"><span class="n">Track 3</span><b>Walk-Away Authority Project</b>A coordinated exit: your options, your advisors working from one plan, and your floor.</li>
     </ul>
     <p class="center" style="margin-top:34px;text-align:center"><a class="textlink" href="#program-note">See the full program</a></p>
-    <p class="note mid"><b>Review note 6.</b> The three tracks by their names, one line each, in your standing order: household, then team, then exit. The long track descriptions, the C2H card, &ldquo;What This Program Is Designed To Help You Build&rdquo; and the comparison section move to a new Program page, which is not mocked up yet, so &ldquo;The Program&rdquo; links on these pages only jump here. The one-line descriptions are drafts. The track artwork is from the live page.</p>
+    <p class="note mid"><b>Review note 7.</b> The three tracks by their names, one line each, in your standing order: household, then team, then exit. The long track descriptions, the C2H card, &ldquo;What This Program Is Designed To Help You Build&rdquo; and the comparison section move to a new Program page, which is not mocked up yet, so &ldquo;The Program&rdquo; links on these pages only jump here. The one-line descriptions are drafts. The track artwork is from the live page.</p>
   </div>
 </section>
 
@@ -397,7 +427,7 @@ a[href^="tel:"] { white-space: nowrap; }
       </div>
     </div>
     <p style="margin-top:34px"><a class="textlink" href="https://www.secureoneveryfront.com/david-teresa">Meet David &amp; Teresa</a></p>
-    <p class="note"><b>Review note 7.</b> Four of your decisions show here. The photo with the &ldquo;Veteran Owned Business&rdquo; badge is replaced by two separate portraits already on your site (O7 stays open). Teresa&rsquo;s years of service are not stated. Teresa is described as outside the pilot (D46). The SHARP Leadership sentence states the family interest in plain words, from what you told me on 2026-11-20; it is my draft, and whether the brochure should also mention it is still open.</p>
+    <p class="note"><b>Review note 8.</b> Three of your decisions show here. Teresa&rsquo;s years of service are not stated. Teresa is described as outside the pilot (D46). The SHARP Leadership sentence states the family interest in plain words, from what you told me on 2026-11-20; it is my draft, and whether the brochure should also mention it is still open.</p>
   </div>
 </section>
 
@@ -409,7 +439,7 @@ a[href^="tel:"] { white-space: nowrap; }
       <h3>Not ready to look at value yet?</h3>
       <p>Start with thirteen questions. The Readiness Review asks about your household, your team and your plans, in your own words, and most owners finish in about 20 minutes.</p>
       <p><a class="btn btn--quiet" href="https://www.secureoneveryfront.com/review">Take the Readiness Review</a></p>
-      <p class="note"><b>Review note 8.</b> The second on-ramp. One quieter, outlined button, so the pilot keeps the only solid button on the page. It stays through the pilot and comes off the day Door 1 opens, when /review points into the app.</p>
+      <p class="note"><b>Review note 9.</b> The second on-ramp. One quieter, outlined button, so the pilot keeps the only solid button on the page. It stays through the pilot and comes off the day Door 1 opens, when /review points into the app.</p>
     </div>
   </div>
 </section>
@@ -434,7 +464,7 @@ a[href^="tel:"] { white-space: nowrap; }
       <div class="blocktext">
         <p>Advisory services are offered by Plan For Your Goals, LLC, a State of Florida Registered Investment Adviser. Insurance products and services are offered and sold through individually licensed and appointed agents.</p>
       </div>
-      <p class="note"><b>Review note 9.</b> A trimmed &ldquo;Our Agreement.&rdquo; The live page says &ldquo;As a fiduciary&rdquo; with nothing about insurance pay beside it; here the insurance sentence from your playbook follows it directly. The link goes to the corrected FAQ answer (FAQ-PAY-ANSWER.md). The small paragraph is the second paragraph of your SOEF block; the first is in the footer.</p>
+      <p class="note"><b>Review note 10.</b> A trimmed &ldquo;Our Agreement.&rdquo; The live page says &ldquo;As a fiduciary&rdquo; with nothing about insurance pay beside it; here the insurance sentence from your playbook follows it directly. The link goes to the corrected FAQ answer (FAQ-PAY-ANSWER.md). The small paragraph is the second paragraph of your SOEF block; the first is in the footer.</p>
     </div>
   </div>
 </section>
